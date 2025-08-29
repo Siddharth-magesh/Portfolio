@@ -57,7 +57,7 @@ export default function AboutPage() {
             <div className="relative">
               <div className="aspect-[3/4] bg-gradient-to-br from-primary/10 to-secondary/10 rounded-2xl flex items-center justify-center">
                 <img
-                  src="/siddharth-profile-vertical.jpg"
+                  src="/siddharth-profile-vertical.png"
                   alt="Siddharth Magesh - Professional Portrait"
                   className="w-full h-full object-cover rounded-xl"
                 />

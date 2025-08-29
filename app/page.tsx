@@ -86,7 +86,7 @@ export default function HomePage() {
             <div className="relative">
               <div className="relative mx-auto w-80 h-96">
                 <img
-                  src="/siddharth-profile-vertical.jpg"
+                  src="/siddharth-profile-vertical.png"
                   alt="Siddharth Magesh"
                   className="w-full h-full object-cover rounded-2xl shadow-2xl"
                 />
