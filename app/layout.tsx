@@ -1,6 +1,7 @@
 import type React from "react"
 import type { Metadata } from "next"
 import { Space_Grotesk, DM_Sans } from "next/font/google"
+import { Analytics } from '@vercel/analytics/next'
 import { ScrollToTop } from "@/components/scroll-to-top"
 import { ClientProvider } from "@/components/client-provider"
 import "./globals.css"
@@ -45,6 +46,7 @@ html {
           <ScrollToTop />
           {children}
         </ClientProvider>
+        <Analytics />
       </body>
     </html>
   )
