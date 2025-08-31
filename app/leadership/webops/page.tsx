@@ -55,10 +55,8 @@ export default function WebOpsPage() {
           <Card>
             <CardContent className="p-8">
               <p className="text-lg text-muted-foreground leading-relaxed">
-                As Vice Chairman of WebOps at Velammal Engineering College, I've had the privilege of leading one of the
-                most dynamic and innovative teams in the institution. WebOps represents the intersection of web
-                development, digital innovation, and technical leadership, where we transform ideas into digital
-                realities that serve our college community and beyond.
+                I was the initial head honcho of the backend for this website, which basically means I lived in the land of APIs, databases, and caffeine. I designed the entire database architecture and crafted the system design like it was a LEGO set for grown-ups. From building scalable endpoints to managing all sorts of wild, raw data, I made sure it all flowed smoothly through custom modules I built specifically to tame the chaos.
+                On top of that, I handled the server-side logic like a backend wizard, optimizing performance, integrating chatbot features (yes, I made it talk!), and making sure everything stayed secure and reliable. If something broke at 3AM, chances are I was already fixing it... or at least yelling at my console lovingly.
               </p>
             </CardContent>
           </Card>
