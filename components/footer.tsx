@@ -1,5 +1,5 @@
 import Link from "next/link"
-import { Github, Linkedin, Mail, Coffee, User, BarChart3, Code } from "lucide-react"
+import { Github, Linkedin, Mail, Coffee, User, BarChart3, Code, GraduationCap } from "lucide-react"
 
 export function Footer() {
   return (
@@ -71,6 +71,14 @@ export function Footer() {
                 className="text-muted-foreground hover:text-primary transition-colors"
               >
                 <Mail className="h-5 w-5" />
+              </Link>
+              <Link
+                href="https://app.onlinedegree.iitm.ac.in/student/22F3002579"
+                className="text-muted-foreground hover:text-primary transition-colors"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <GraduationCap className="h-5 w-5" />
               </Link>
               <Link
                 href="https://buymeacoffee.com/Siddharth_Magesh"
