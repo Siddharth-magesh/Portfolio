@@ -153,7 +153,7 @@ export default function YouthRedCrossPage() {
               <CardHeader>
                 <div className="flex items-center space-x-3 mb-4">
                   <Code className="h-8 w-8 text-primary" />
-                  <Badge variant="secondary">2024-2025</Badge>
+                  <Badge variant="outline">2024-2025</Badge>
                 </div>
                 <CardTitle className="font-heading text-xl">Technical Head</CardTitle>
                 <div className="mt-4 aspect-video bg-gradient-to-br from-green-50 to-green-100 rounded-lg flex items-center justify-center border-2 border-dashed border-green-200 overflow-hidden">
@@ -309,7 +309,7 @@ export default function YouthRedCrossPage() {
 
           <div className="mb-8">
             <h3 className="font-heading text-2xl mb-6">Activity Gallery</h3>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
+            <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-4 mb-8">
               {/* Blood Donation Activities */}
               <div className="aspect-square bg-gradient-to-br from-red-50 to-red-100 rounded-lg flex items-center justify-center border-2 border-dashed border-red-200 hover:shadow-lg transition-all duration-300 overflow-hidden">
                 <img
@@ -342,6 +342,60 @@ export default function YouthRedCrossPage() {
                 <img
                   src="/yrc/community-outreach.jpg"
                   alt="Community Outreach"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+
+              {/* Workshop Activities */}
+              <div className="aspect-square bg-gradient-to-br from-yellow-50 to-yellow-100 rounded-lg flex items-center justify-center border-2 border-dashed border-yellow-200 hover:shadow-lg transition-all duration-300 overflow-hidden">
+                <img
+                  src="/yrc/workshop-activities.jpg"
+                  alt="Workshop Activities"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+
+              {/* Animal Welfare Drive */}
+              <div className="aspect-square bg-gradient-to-br from-orange-50 to-orange-100 rounded-lg flex items-center justify-center border-2 border-dashed border-orange-200 hover:shadow-lg transition-all duration-300 overflow-hidden">
+                <img
+                  src="/yrc/animal-welfare.jpg"
+                  alt="Animal Welfare Drive"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+
+              {/* Plantation Event */}
+              <div className="aspect-square bg-gradient-to-br from-teal-50 to-teal-100 rounded-lg flex items-center justify-center border-2 border-dashed border-teal-200 hover:shadow-lg transition-all duration-300 overflow-hidden">
+                <img
+                  src="/yrc/plantation-event.jpg"
+                  alt="Plantation Event"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+
+              {/* Team Building */}
+              <div className="aspect-square bg-gradient-to-br from-pink-50 to-pink-100 rounded-lg flex items-center justify-center border-2 border-dashed border-pink-200 hover:shadow-lg transition-all duration-300 overflow-hidden">
+                <img
+                  src="/yrc/team-building.jpg"
+                  alt="Team Building Activities"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+
+              {/* Event Coordination */}
+              <div className="aspect-square bg-gradient-to-br from-indigo-50 to-indigo-100 rounded-lg flex items-center justify-center border-2 border-dashed border-indigo-200 hover:shadow-lg transition-all duration-300 overflow-hidden">
+                <img
+                  src="/yrc/event-coordination.jpg"
+                  alt="Event Coordination"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              
+              {/* Technical Training */}
+              <div className="aspect-square bg-gradient-to-br from-cyan-50 to-cyan-100 rounded-lg flex items-center justify-center border-2 border-dashed border-cyan-200 hover:shadow-lg transition-all duration-300 overflow-hidden">
+                <img
+                  src="/yrc/technical-training.jpg"
+                  alt="Technical Training Session"
                   className="w-full h-full object-cover"
                 />
               </div>
@@ -416,6 +470,76 @@ export default function YouthRedCrossPage() {
                   <li>• Technical skill development sessions</li>
                   <li>• Digital literacy programs</li>
                 </ul>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+
+      {/* Community & Open Source */}
+      <section className="section-padding">
+        <div className="container-max">
+          <div className="text-center mb-12">
+            <h2 className="font-heading text-3xl mb-4">Community & Open Source</h2>
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+              Contributing to open source communities and fostering collaborative development
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+            <Card className="hover:shadow-lg hover:shadow-blue-500/10 transition-all duration-300">
+              <CardHeader>
+                <CardTitle className="flex items-center gap-3">
+                  <div className="p-2 bg-black text-white rounded-lg">
+                    <Code className="h-6 w-6" />
+                  </div>
+                  GitHub Community
+                </CardTitle>
+              </CardHeader>
+              <CardContent>
+                <div className="space-y-4">
+                  <Badge variant="outline" className="bg-green-50 text-green-700 border-green-200">
+                    Legacy Member
+                  </Badge>
+                  <p className="text-muted-foreground">
+                    Active contributor to the GitHub community, sharing open-source projects and collaborating 
+                    with developers worldwide on innovative solutions.
+                  </p>
+                  <Button variant="outline" asChild className="w-full">
+                    <Link href="https://github.com/Youth-Red-Cross-VEC" target="_blank">
+                      View GitHub Profile
+                      <ArrowRight className="ml-2 h-4 w-4" />
+                    </Link>
+                  </Button>
+                </div>
+              </CardContent>
+            </Card>
+
+            <Card className="hover:shadow-lg hover:shadow-orange-500/10 transition-all duration-300">
+              <CardHeader>
+                <CardTitle className="flex items-center gap-3">
+                  <div className="p-2 bg-gradient-to-r from-yellow-400 to-orange-500 text-white rounded-lg">
+                    <Users className="h-6 w-6" />
+                  </div>
+                  Hugging Face Community
+                </CardTitle>
+              </CardHeader>
+              <CardContent>
+                <div className="space-y-4">
+                  <Badge variant="outline" className="bg-orange-50 text-orange-700 border-orange-200">
+                    AI/ML Community
+                  </Badge>
+                  <p className="text-muted-foreground">
+                    Member of the Hugging Face community, contributing to AI/ML projects and sharing 
+                    models and datasets for the advancement of artificial intelligence.
+                  </p>
+                  <Button variant="outline" asChild className="w-full">
+                    <Link href="https://huggingface.co/YouthRedCross-VEC" target="_blank">
+                      View HF Profile
+                      <ArrowRight className="ml-2 h-4 w-4" />
+                    </Link>
+                  </Button>
+                </div>
               </CardContent>
             </Card>
           </div>
