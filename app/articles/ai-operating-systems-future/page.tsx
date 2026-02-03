@@ -5,7 +5,7 @@ import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import { Calendar, Clock, ArrowLeft, BookOpen, Lightbulb, Cpu, Monitor, Zap, Brain, Layers, Globe, Sparkles } from "lucide-react"
 import Link from "next/link"
-import { FadeIn, SlideIn, StaggerContainer, StaggerItem } from "@/components/animations"
+import { FadeIn, StaggerContainer, StaggerItem } from "@/components/animations"
 
 export default function AIOperatingSystemsArticlePage() {
   return (
@@ -26,7 +26,7 @@ export default function AIOperatingSystemsArticlePage() {
             </Link>
           </FadeIn>
 
-          <SlideIn direction="up">
+          <FadeIn>
             <div className="flex flex-wrap items-center gap-3 mb-6">
               <Badge className="badge-violet">AI Research</Badge>
               <Badge variant="outline" className="flex items-center gap-1">
@@ -38,22 +38,22 @@ export default function AIOperatingSystemsArticlePage() {
                 8 min read
               </Badge>
             </div>
-          </SlideIn>
+          </FadeIn>
 
-          <SlideIn direction="up" delay={0.1}>
+          <FadeIn delay={0.1}>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6 leading-tight">
               The Future of AI-Powered Operating Systems: Lessons from{" "}
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-violet to-primary">OSSARTH</span>
             </h1>
-          </SlideIn>
+          </FadeIn>
 
-          <SlideIn direction="up" delay={0.2}>
+          <FadeIn delay={0.2}>
             <p className="text-xl text-muted-foreground leading-relaxed mb-8">
               Exploring how artificial intelligence can revolutionize operating system design, from intelligent resource management to predictive user interfaces.
             </p>
-          </SlideIn>
+          </FadeIn>
 
-          <SlideIn direction="up" delay={0.3}>
+          <FadeIn delay={0.3}>
             <div className="flex items-center gap-4 p-4 bg-card/50 backdrop-blur-sm rounded-xl border border-border">
               <div className="w-12 h-12 rounded-full bg-gradient-to-br from-violet to-primary flex items-center justify-center text-white font-bold">
                 SM
@@ -63,7 +63,7 @@ export default function AIOperatingSystemsArticlePage() {
                 <p className="text-sm text-muted-foreground">AI Researcher & Creator of OSSARTH</p>
               </div>
             </div>
-          </SlideIn>
+          </FadeIn>
         </div>
       </section>
 
@@ -102,7 +102,7 @@ export default function AIOperatingSystemsArticlePage() {
                 <div className="prose prose-lg max-w-none">
 
                   {/* Section 1 */}
-                  <SlideIn direction="up">
+                  <FadeIn>
                     <h2 className="text-3xl font-bold text-foreground mb-6 mt-0 flex items-center gap-3">
                       <Monitor className="w-8 h-8 text-violet" />
                       The Great Interface Evolution
@@ -118,10 +118,10 @@ export default function AIOperatingSystemsArticlePage() {
                     <p className="text-foreground/90 leading-relaxed mb-6">
                       Today, we stand at the threshold of the next great interface evolution. Enter OSSARTH and the emerging world of LLM-powered operating systems – where the efficiency of command-line interfaces meets the accessibility of natural language, potentially giving us the best of both worlds while paving the way toward something that looks suspiciously like JARVIS from the Iron Man movies.
                     </p>
-                  </SlideIn>
+                  </FadeIn>
 
                   {/* Section 2 */}
-                  <SlideIn direction="up" delay={0.1}>
+                  <FadeIn delay={0.1}>
                     <h2 className="text-3xl font-bold text-foreground mb-6 mt-12 flex items-center gap-3">
                       <Brain className="w-8 h-8 text-primary" />
                       The OSSARTH Vision
@@ -139,10 +139,10 @@ export default function AIOperatingSystemsArticlePage() {
                         The magic happens in the translation layer. An LLM-powered OS doesn't just understand your request – it converts it into the most efficient underlying system commands, executes them, and presents the results in a way that makes sense to you. It's like having a personal translator who speaks fluent Computer and fluent Human.
                       </p>
                     </div>
-                  </SlideIn>
+                  </FadeIn>
 
                   {/* Section 3 */}
-                  <SlideIn direction="up" delay={0.1}>
+                  <FadeIn delay={0.1}>
                     <h2 className="text-3xl font-bold text-foreground mb-6 mt-12 flex items-center gap-3">
                       <Zap className="w-8 h-8 text-amber" />
                       The CLI Renaissance
@@ -158,10 +158,10 @@ export default function AIOperatingSystemsArticlePage() {
                     <p className="text-foreground/90 leading-relaxed mb-6">
                       An LLM-powered OS changes this equation entirely. It maintains all the efficiency of CLI operations while wrapping them in a natural language interface. When you ask for something in plain English, the AI translates this into the optimal sequence of system commands, executes them at native speed, and presents the results in a human-readable format.
                     </p>
-                  </SlideIn>
+                  </FadeIn>
 
                   {/* Intelligent Features Box */}
-                  <SlideIn direction="up" delay={0.1}>
+                  <FadeIn delay={0.1}>
                     <div className="my-10 p-8 bg-gradient-to-br from-violet/5 to-primary/5 rounded-2xl border border-violet/20">
                       <h3 className="text-xl font-bold text-foreground mb-6 flex items-center gap-2">
                         <Layers className="w-6 h-6 text-violet" />
@@ -181,10 +181,10 @@ export default function AIOperatingSystemsArticlePage() {
                         ))}
                       </div>
                     </div>
-                  </SlideIn>
+                  </FadeIn>
 
                   {/* Section 4 */}
-                  <SlideIn direction="up" delay={0.1}>
+                  <FadeIn delay={0.1}>
                     <h2 className="text-3xl font-bold text-foreground mb-6 mt-12 flex items-center gap-3">
                       <Cpu className="w-8 h-8 text-emerald" />
                       The Hardware Reality Check
@@ -200,19 +200,19 @@ export default function AIOperatingSystemsArticlePage() {
                     <p className="text-foreground/90 leading-relaxed mb-6">
                       The key insight is that an LLM-powered OS doesn't need to perform complex AI training – it primarily needs to run inference on pre-trained models. This is a much lighter computational task that can be handled effectively by dedicated NPUs, even relatively modest ones.
                     </p>
-                  </SlideIn>
+                  </FadeIn>
 
                   {/* Quote Block */}
-                  <SlideIn direction="up" delay={0.1}>
+                  <FadeIn delay={0.1}>
                     <blockquote className="my-10 p-6 border-l-4 border-violet bg-gradient-to-r from-violet/10 to-transparent rounded-r-xl">
                       <p className="text-xl italic text-foreground/90 mb-0">
                         "We're moving from systems that require users to learn computer languages to systems that speak human language fluently."
                       </p>
                     </blockquote>
-                  </SlideIn>
+                  </FadeIn>
 
                   {/* Section 5 */}
-                  <SlideIn direction="up" delay={0.1}>
+                  <FadeIn delay={0.1}>
                     <h2 className="text-3xl font-bold text-foreground mb-6 mt-12 flex items-center gap-3">
                       <BookOpen className="w-8 h-8 text-rose" />
                       Real-World Applications
@@ -224,10 +224,10 @@ export default function AIOperatingSystemsArticlePage() {
                     <p className="text-foreground/90 leading-relaxed mb-6">
                       Or consider system maintenance: Instead of navigating through control panels and system settings, you could say: "My computer feels slow today." The OS would analyze performance metrics, identify bottlenecks, clear unnecessary temporary files, optimize startup programs, and provide a summary of actions taken.
                     </p>
-                  </SlideIn>
+                  </FadeIn>
 
                   {/* Evolution Phases */}
-                  <SlideIn direction="up" delay={0.1}>
+                  <FadeIn delay={0.1}>
                     <h2 className="text-3xl font-bold text-foreground mb-6 mt-12">The Path to JARVIS: Incremental Intelligence</h2>
                     <p className="text-foreground/90 leading-relaxed mb-8">
                       The journey toward a truly intelligent operating system won't happen overnight. We're likely to see a gradual evolution through four distinct phases:
@@ -249,10 +249,10 @@ export default function AIOperatingSystemsArticlePage() {
                         </Card>
                       ))}
                     </div>
-                  </SlideIn>
+                  </FadeIn>
 
                   {/* Section 6 */}
-                  <SlideIn direction="up" delay={0.1}>
+                  <FadeIn delay={0.1}>
                     <h2 className="text-3xl font-bold text-foreground mb-6 mt-12 flex items-center gap-3">
                       <Globe className="w-8 h-8 text-teal" />
                       Democratizing Computing Power
@@ -264,10 +264,10 @@ export default function AIOperatingSystemsArticlePage() {
                     <p className="text-foreground/90 leading-relaxed mb-6">
                       The beauty of the OSSARTH approach, inspired by the accessibility shown in "Her," is that it could reach a dramatically wider audience than traditional interfaces. An elderly person who struggles with modern GUIs could simply speak to their computer naturally. A child could explore programming concepts by describing what they want their computer to do.
                     </p>
-                  </SlideIn>
+                  </FadeIn>
 
                   {/* Conclusion Box */}
-                  <SlideIn direction="up" delay={0.1}>
+                  <FadeIn delay={0.1}>
                     <div className="my-12 p-8 bg-gradient-to-br from-violet/10 via-primary/10 to-emerald/10 rounded-2xl border border-violet/20">
                       <h2 className="text-2xl font-bold text-foreground mb-4">Looking Forward: The Next Decade</h2>
                       <p className="text-foreground/90 leading-relaxed mb-4">
@@ -277,10 +277,10 @@ export default function AIOperatingSystemsArticlePage() {
                         The next decade will likely see rapid evolution in this space, driven by advances in AI efficiency, specialized hardware like NPUs, and user demand for more intuitive computing experiences. The winners will be systems that can balance intelligence with efficiency, privacy with functionality, and innovation with reliability.
                       </p>
                     </div>
-                  </SlideIn>
+                  </FadeIn>
 
                   {/* Final Statement */}
-                  <SlideIn direction="up" delay={0.1}>
+                  <FadeIn delay={0.1}>
                     <div className="text-center mt-12 p-8 bg-gradient-to-r from-violet/5 to-primary/5 rounded-xl">
                       <p className="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-violet to-primary mb-4">
                         The age of conversational computing is beginning.
@@ -293,7 +293,7 @@ export default function AIOperatingSystemsArticlePage() {
                     <p className="text-sm text-muted-foreground italic mt-8 text-center">
                       This article explores the technical and social implications of AI-powered operating systems. OSSARTH represents one approach among many emerging solutions in this rapidly evolving field.
                     </p>
-                  </SlideIn>
+                  </FadeIn>
                 </div>
               </CardContent>
             </Card>

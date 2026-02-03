@@ -5,7 +5,7 @@ import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import { Calendar, Clock, ArrowLeft, Lightbulb, Sparkles, Brain, Wrench, Users, TrendingUp, Scale, AlertTriangle, CheckCircle, XCircle, Handshake, GraduationCap, Cpu } from "lucide-react"
 import Link from "next/link"
-import { FadeIn, SlideIn, StaggerContainer, StaggerItem } from "@/components/animations"
+import { FadeIn, StaggerContainer, StaggerItem } from "@/components/animations"
 
 export default function AIReplacingHumansJobsArticlePage() {
   return (
@@ -26,7 +26,7 @@ export default function AIReplacingHumansJobsArticlePage() {
             </Link>
           </FadeIn>
 
-          <SlideIn direction="up">
+          <FadeIn>
             <div className="flex flex-wrap items-center gap-3 mb-6">
               <Badge className="badge-amber">Future of Work</Badge>
               <Badge variant="outline" className="flex items-center gap-1">
@@ -38,22 +38,22 @@ export default function AIReplacingHumansJobsArticlePage() {
                 14 min read
               </Badge>
             </div>
-          </SlideIn>
+          </FadeIn>
 
-          <SlideIn direction="up" delay={0.1}>
+          <FadeIn delay={0.1}>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6 leading-tight">
               Will AI Replace Humans in Jobs?{" "}
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber to-rose">My Perspective</span>
             </h1>
-          </SlideIn>
+          </FadeIn>
 
-          <SlideIn direction="up" delay={0.2}>
+          <FadeIn delay={0.2}>
             <p className="text-xl text-muted-foreground leading-relaxed mb-8">
               An in-depth analysis of whether artificial intelligence will truly replace human workers, exploring collaboration possibilities, job transformation, and the evolving nature of work.
             </p>
-          </SlideIn>
+          </FadeIn>
 
-          <SlideIn direction="up" delay={0.3}>
+          <FadeIn delay={0.3}>
             <div className="flex items-center gap-4 p-4 bg-card/50 backdrop-blur-sm rounded-xl border border-border">
               <div className="w-12 h-12 rounded-full bg-gradient-to-br from-amber to-rose flex items-center justify-center text-white font-bold">
                 SM
@@ -63,7 +63,7 @@ export default function AIReplacingHumansJobsArticlePage() {
                 <p className="text-sm text-muted-foreground">AI Researcher & Workforce Analyst</p>
               </div>
             </div>
-          </SlideIn>
+          </FadeIn>
         </div>
       </section>
 
@@ -102,7 +102,7 @@ export default function AIReplacingHumansJobsArticlePage() {
                 <div className="prose prose-lg max-w-none">
 
                   {/* Section 1 */}
-                  <SlideIn direction="up">
+                  <FadeIn>
                     <h2 className="text-3xl font-bold text-foreground mb-6 mt-0 flex items-center gap-3">
                       <Scale className="w-8 h-8 text-amber" />
                       The Great Replacement Debate: Brain vs. Muscle
@@ -114,10 +114,10 @@ export default function AIReplacingHumansJobsArticlePage() {
                     <p className="text-foreground/90 leading-relaxed mb-6">
                       This distinction isn't just semantic; it's the key to understanding which jobs will actually be displaced by AI and which will remain stubbornly, irreplaceably human. The current AI revolution is fundamentally about cognitive automation, not physical replacement. And that changes everything about how we should think about the future of work.
                     </p>
-                  </SlideIn>
+                  </FadeIn>
 
                   {/* Section 2 */}
-                  <SlideIn direction="up" delay={0.1}>
+                  <FadeIn delay={0.1}>
                     <h2 className="text-3xl font-bold text-foreground mb-6 mt-12 flex items-center gap-3">
                       <Brain className="w-8 h-8 text-violet" />
                       The Cognitive Revolution: When Thinking Becomes Automated
@@ -135,10 +135,10 @@ export default function AIReplacingHumansJobsArticlePage() {
                         <strong>Here's where it gets interesting:</strong> Jobs that are purely cognitive are genuinely at risk of replacement. When a task requires only thinking, pattern recognition, and information processing – and doesn't require physical interaction with the unpredictable real world – AI systems can often match or exceed human performance while working faster, cheaper, and without needing coffee breaks.
                       </p>
                     </div>
-                  </SlideIn>
+                  </FadeIn>
 
                   {/* Section 3 */}
-                  <SlideIn direction="up" delay={0.1}>
+                  <FadeIn delay={0.1}>
                     <h2 className="text-3xl font-bold text-foreground mb-6 mt-12 flex items-center gap-3">
                       <Wrench className="w-8 h-8 text-emerald" />
                       The Physical World Problem
@@ -154,19 +154,19 @@ export default function AIReplacingHumansJobsArticlePage() {
                     <p className="text-foreground/90 leading-relaxed mb-6">
                       This is why a radiologist (brain-heavy job) might be more vulnerable to AI replacement than a plumber (muscle-heavy job), even though we generally consider radiology to be more skilled and higher-paying work. The radiologist's job is primarily about pattern recognition in standardized medical images. The plumber's job is about manipulating physical objects in unpredictable environments.
                     </p>
-                  </SlideIn>
+                  </FadeIn>
 
                   {/* Quote Block */}
-                  <SlideIn direction="up" delay={0.1}>
+                  <FadeIn delay={0.1}>
                     <blockquote className="my-10 p-6 border-l-4 border-amber bg-gradient-to-r from-amber/10 to-transparent rounded-r-xl">
                       <p className="text-xl italic text-foreground/90 mb-0">
                         "We're replacing the brain before the muscle. This creates a unique moment where traditional relationships between skill level and job security may be temporarily inverted."
                       </p>
                     </blockquote>
-                  </SlideIn>
+                  </FadeIn>
 
                   {/* Vulnerability Spectrum */}
-                  <SlideIn direction="up" delay={0.1}>
+                  <FadeIn delay={0.1}>
                     <h2 className="text-3xl font-bold text-foreground mb-6 mt-12 flex items-center gap-3">
                       <AlertTriangle className="w-8 h-8 text-rose" />
                       The Spectrum of Vulnerability
@@ -227,10 +227,10 @@ export default function AIReplacingHumansJobsArticlePage() {
                         </CardContent>
                       </Card>
                     </div>
-                  </SlideIn>
+                  </FadeIn>
 
                   {/* Section 4 */}
-                  <SlideIn direction="up" delay={0.1}>
+                  <FadeIn delay={0.1}>
                     <h2 className="text-3xl font-bold text-foreground mb-6 mt-12 flex items-center gap-3">
                       <Handshake className="w-8 h-8 text-primary" />
                       The Collaboration Revolution
@@ -260,10 +260,10 @@ export default function AIReplacingHumansJobsArticlePage() {
                         ))}
                       </div>
                     </div>
-                  </SlideIn>
+                  </FadeIn>
 
                   {/* Section 5 */}
-                  <SlideIn direction="up" delay={0.1}>
+                  <FadeIn delay={0.1}>
                     <h2 className="text-3xl font-bold text-foreground mb-6 mt-12 flex items-center gap-3">
                       <Cpu className="w-8 h-8 text-teal" />
                       The Physical Bottleneck
@@ -275,10 +275,10 @@ export default function AIReplacingHumansJobsArticlePage() {
                     <p className="text-foreground/90 leading-relaxed mb-6">
                       Current robotics faces fundamental challenges: dexterity limitations, environmental adaptability, cost factors, and energy efficiency. Human hands can perform thousands of manipulation tasks with incredible precision. Robots typically require controlled, predictable environments and often cost significantly more than human labor.
                     </p>
-                  </SlideIn>
+                  </FadeIn>
 
                   {/* Timeline Section */}
-                  <SlideIn direction="up" delay={0.1}>
+                  <FadeIn delay={0.1}>
                     <h2 className="text-3xl font-bold text-foreground mb-6 mt-12 flex items-center gap-3">
                       <TrendingUp className="w-8 h-8 text-amber" />
                       The Timeline Question
@@ -304,10 +304,10 @@ export default function AIReplacingHumansJobsArticlePage() {
                         </Card>
                       ))}
                     </div>
-                  </SlideIn>
+                  </FadeIn>
 
                   {/* Section 6 */}
-                  <SlideIn direction="up" delay={0.1}>
+                  <FadeIn delay={0.1}>
                     <h2 className="text-3xl font-bold text-foreground mb-6 mt-12 flex items-center gap-3">
                       <GraduationCap className="w-8 h-8 text-violet" />
                       The Skills Evolution
@@ -338,10 +338,10 @@ export default function AIReplacingHumansJobsArticlePage() {
                     <p className="text-foreground/90 leading-relaxed mb-6">
                       These represent the distinctly human capabilities that will remain relevant in an AI-enhanced world.
                     </p>
-                  </SlideIn>
+                  </FadeIn>
 
                   {/* Conclusion Box */}
-                  <SlideIn direction="up" delay={0.1}>
+                  <FadeIn delay={0.1}>
                     <div className="my-12 p-8 bg-gradient-to-br from-amber/10 via-rose/10 to-primary/10 rounded-2xl border border-amber/20">
                       <h2 className="text-2xl font-bold text-foreground mb-4">Conclusion: The Future is Hybrid, Not Replacement</h2>
                       <p className="text-foreground/90 leading-relaxed mb-4">
@@ -354,10 +354,10 @@ export default function AIReplacingHumansJobsArticlePage() {
                         Rather than fearing this future, we should prepare for it by developing skills that complement AI capabilities and recognizing that the most secure jobs may be those that require both thinking and doing in the messy, unpredictable real world.
                       </p>
                     </div>
-                  </SlideIn>
+                  </FadeIn>
 
                   {/* Final Statement */}
-                  <SlideIn direction="up" delay={0.1}>
+                  <FadeIn delay={0.1}>
                     <div className="text-center mt-12 p-8 bg-gradient-to-r from-amber/5 to-rose/5 rounded-xl">
                       <p className="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-amber to-rose mb-4">
                         The robots aren't coming for all our jobs.
@@ -370,7 +370,7 @@ export default function AIReplacingHumansJobsArticlePage() {
                     <p className="text-sm text-muted-foreground italic mt-8 text-center">
                       This article represents my analysis of AI's impact on employment. The future of work continues to evolve as technology advances and new forms of human-AI collaboration emerge.
                     </p>
-                  </SlideIn>
+                  </FadeIn>
                 </div>
               </CardContent>
             </Card>

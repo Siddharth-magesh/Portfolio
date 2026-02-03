@@ -5,7 +5,7 @@ import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import { Calendar, Clock, ArrowLeft, Lightbulb, Sparkles, BarChart3, Users, Globe, Brain, Zap, Target, TrendingUp, Mic, Play } from "lucide-react"
 import Link from "next/link"
-import { FadeIn, SlideIn, StaggerContainer, StaggerItem } from "@/components/animations"
+import { FadeIn, StaggerContainer, StaggerItem } from "@/components/animations"
 
 export default function AISportsCommentaryArticlePage() {
   return (
@@ -26,7 +26,7 @@ export default function AISportsCommentaryArticlePage() {
             </Link>
           </FadeIn>
 
-          <SlideIn direction="up">
+          <FadeIn>
             <div className="flex flex-wrap items-center gap-3 mb-6">
               <Badge className="badge-emerald">Sports Tech</Badge>
               <Badge variant="outline" className="flex items-center gap-1">
@@ -38,22 +38,22 @@ export default function AISportsCommentaryArticlePage() {
                 10 min read
               </Badge>
             </div>
-          </SlideIn>
+          </FadeIn>
 
-          <SlideIn direction="up" delay={0.1}>
+          <FadeIn delay={0.1}>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6 leading-tight">
               AI Commentary on Sports:{" "}
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald to-amber">Revolutionizing Athletic Broadcasting</span>
             </h1>
-          </SlideIn>
+          </FadeIn>
 
-          <SlideIn direction="up" delay={0.2}>
+          <FadeIn delay={0.2}>
             <p className="text-xl text-muted-foreground leading-relaxed mb-8">
               Exploring how artificial intelligence will transform sports commentary, analysis, and fan engagement, from real-time insights to personalized viewing experiences.
             </p>
-          </SlideIn>
+          </FadeIn>
 
-          <SlideIn direction="up" delay={0.3}>
+          <FadeIn delay={0.3}>
             <div className="flex items-center gap-4 p-4 bg-card/50 backdrop-blur-sm rounded-xl border border-border">
               <div className="w-12 h-12 rounded-full bg-gradient-to-br from-emerald to-amber flex items-center justify-center text-white font-bold">
                 SM
@@ -63,7 +63,7 @@ export default function AISportsCommentaryArticlePage() {
                 <p className="text-sm text-muted-foreground">AI Researcher & Sports Enthusiast</p>
               </div>
             </div>
-          </SlideIn>
+          </FadeIn>
         </div>
       </section>
 
@@ -102,7 +102,7 @@ export default function AISportsCommentaryArticlePage() {
                 <div className="prose prose-lg max-w-none">
 
                   {/* Section 1 */}
-                  <SlideIn direction="up">
+                  <FadeIn>
                     <h2 className="text-3xl font-bold text-foreground mb-6 mt-0 flex items-center gap-3">
                       <Mic className="w-8 h-8 text-emerald" />
                       The Commentary Box Gets a Digital Upgrade
@@ -114,10 +114,10 @@ export default function AISportsCommentaryArticlePage() {
                     <p className="text-foreground/90 leading-relaxed mb-6">
                       Welcome to the future of sports broadcasting, where artificial intelligence isn't replacing the human element of sports commentary – it's supercharging it with insights that would make even the most seasoned analysts pause and take notes.
                     </p>
-                  </SlideIn>
+                  </FadeIn>
 
                   {/* Section 2 */}
-                  <SlideIn direction="up" delay={0.1}>
+                  <FadeIn delay={0.1}>
                     <h2 className="text-3xl font-bold text-foreground mb-6 mt-12 flex items-center gap-3">
                       <BarChart3 className="w-8 h-8 text-amber" />
                       From Human Intuition to Data-Driven Storytelling
@@ -129,10 +129,10 @@ export default function AISportsCommentaryArticlePage() {
                     <p className="text-foreground/90 leading-relaxed mb-6">
                       Traditional commentators rely on experience, intuition, and a good memory for statistics. They might remember that a particular player struggles in the rain or that a team has never won after trailing by more than 10 points in the fourth quarter. AI commentary systems, however, can access and process millions of data points simultaneously, identifying patterns and correlations that even the most knowledgeable human experts would never notice.
                     </p>
-                  </SlideIn>
+                  </FadeIn>
 
                   {/* Section 3 */}
-                  <SlideIn direction="up" delay={0.1}>
+                  <FadeIn delay={0.1}>
                     <h2 className="text-3xl font-bold text-foreground mb-6 mt-12 flex items-center gap-3">
                       <Zap className="w-8 h-8 text-violet" />
                       Real-Time Analysis That Actually Keeps Up
@@ -144,10 +144,10 @@ export default function AISportsCommentaryArticlePage() {
                     <p className="text-foreground/90 leading-relaxed mb-6">
                       AI systems can analyze plays as they unfold, providing instant context and predictions. When a quarterback drops back to pass, the AI can immediately calculate the probability of success based on down and distance, defensive alignment, receiver routes, historical performance in similar situations, and even environmental factors like wind speed and crowd noise.
                     </p>
-                  </SlideIn>
+                  </FadeIn>
 
                   {/* Personalized Commentary Box */}
-                  <SlideIn direction="up" delay={0.1}>
+                  <FadeIn delay={0.1}>
                     <div className="my-10 p-8 bg-gradient-to-br from-emerald/5 to-amber/5 rounded-2xl border border-emerald/20">
                       <h3 className="text-xl font-bold text-foreground mb-6 flex items-center gap-2">
                         <Users className="w-6 h-6 text-emerald" />
@@ -169,10 +169,10 @@ export default function AISportsCommentaryArticlePage() {
                         ))}
                       </div>
                     </div>
-                  </SlideIn>
+                  </FadeIn>
 
                   {/* Section 4 */}
-                  <SlideIn direction="up" delay={0.1}>
+                  <FadeIn delay={0.1}>
                     <h2 className="text-3xl font-bold text-foreground mb-6 mt-12 flex items-center gap-3">
                       <Target className="w-8 h-8 text-rose" />
                       The Personalization Revolution
@@ -184,19 +184,19 @@ export default function AISportsCommentaryArticlePage() {
                     <p className="text-foreground/90 leading-relaxed mb-6">
                       AI commentary isn't limited to the traditional play-by-play format. Advanced systems can provide multiple layers of analysis simultaneously, allowing viewers to choose their level of engagement. Predictive overlays show probability of different outcomes in real-time. Historical context windows provide relevant comparisons without interrupting game flow. Tactical breakdowns offer frame-by-frame analysis of key plays, while emotional intelligence systems analyze crowd reactions and momentum shifts.
                     </p>
-                  </SlideIn>
+                  </FadeIn>
 
                   {/* Quote Block */}
-                  <SlideIn direction="up" delay={0.1}>
+                  <FadeIn delay={0.1}>
                     <blockquote className="my-10 p-6 border-l-4 border-emerald bg-gradient-to-r from-emerald/10 to-transparent rounded-r-xl">
                       <p className="text-xl italic text-foreground/90 mb-0">
                         "AI commentary will fundamentally change how fans experience sports, making every game more engaging and educational."
                       </p>
                     </blockquote>
-                  </SlideIn>
+                  </FadeIn>
 
                   {/* Section 5 */}
-                  <SlideIn direction="up" delay={0.1}>
+                  <FadeIn delay={0.1}>
                     <h2 className="text-3xl font-bold text-foreground mb-6 mt-12 flex items-center gap-3">
                       <Globe className="w-8 h-8 text-teal" />
                       The Multilingual and Cultural Advantage
@@ -211,10 +211,10 @@ export default function AISportsCommentaryArticlePage() {
                         A soccer match between European teams might be commented differently for audiences in <strong>Brazil</strong> (focusing on technical skill and creativity), <strong>Germany</strong> (emphasizing tactical discipline and efficiency), or the <strong>United States</strong> (providing more basic explanations and drawing comparisons to American sports).
                       </p>
                     </div>
-                  </SlideIn>
+                  </FadeIn>
 
                   {/* Section 6 */}
-                  <SlideIn direction="up" delay={0.1}>
+                  <FadeIn delay={0.1}>
                     <h2 className="text-3xl font-bold text-foreground mb-6 mt-12 flex items-center gap-3">
                       <Brain className="w-8 h-8 text-primary" />
                       Learning from Every Game
@@ -226,10 +226,10 @@ export default function AISportsCommentaryArticlePage() {
                     <p className="text-foreground/90 leading-relaxed mb-6">
                       This creates a feedback loop of continuous improvement. The AI doesn't just get better at predicting outcomes – it gets better at explaining those predictions in ways that enhance rather than overwhelm the viewing experience.
                     </p>
-                  </SlideIn>
+                  </FadeIn>
 
                   {/* Section 7 */}
-                  <SlideIn direction="up" delay={0.1}>
+                  <FadeIn delay={0.1}>
                     <h2 className="text-3xl font-bold text-foreground mb-6 mt-12 flex items-center gap-3">
                       <Play className="w-8 h-8 text-amber" />
                       The Integration Challenge
@@ -241,10 +241,10 @@ export default function AISportsCommentaryArticlePage() {
                     <p className="text-foreground/90 leading-relaxed mb-6">
                       Imagine a broadcast team where the play-by-play announcer focuses on narrative and emotion while having access to AI-generated insights that appear in real-time. This hybrid approach preserves the human elements that make sports commentary compelling while adding the analytical depth that only AI can provide.
                     </p>
-                  </SlideIn>
+                  </FadeIn>
 
                   {/* Section 8 */}
-                  <SlideIn direction="up" delay={0.1}>
+                  <FadeIn delay={0.1}>
                     <h2 className="text-3xl font-bold text-foreground mb-6 mt-12 flex items-center gap-3">
                       <TrendingUp className="w-8 h-8 text-emerald" />
                       Economic Implications: Democratizing Analysis
@@ -256,10 +256,10 @@ export default function AISportsCommentaryArticlePage() {
                     <p className="text-foreground/90 leading-relaxed mb-6">
                       AI systems could make professional-quality analysis accessible to smaller leagues, amateur sports, and emerging sports that currently lack comprehensive coverage. A high school football game could theoretically have the same level of analytical depth as an NFL broadcast, making these events more engaging for participants, families, and communities.
                     </p>
-                  </SlideIn>
+                  </FadeIn>
 
                   {/* Conclusion Box */}
-                  <SlideIn direction="up" delay={0.1}>
+                  <FadeIn delay={0.1}>
                     <div className="my-12 p-8 bg-gradient-to-br from-emerald/10 via-amber/10 to-primary/10 rounded-2xl border border-emerald/20">
                       <h2 className="text-2xl font-bold text-foreground mb-4">Looking Ahead: The Next Decade</h2>
                       <p className="text-foreground/90 leading-relaxed mb-4">
@@ -269,10 +269,10 @@ export default function AISportsCommentaryArticlePage() {
                         Within five years, AI assistants will become standard tools for human commentators. The ultimate evolution might be truly interactive commentary experiences, where viewers can ask questions and receive answers in real-time, creating new forms of fan engagement we're only beginning to imagine.
                       </p>
                     </div>
-                  </SlideIn>
+                  </FadeIn>
 
                   {/* Final Statement */}
-                  <SlideIn direction="up" delay={0.1}>
+                  <FadeIn delay={0.1}>
                     <div className="text-center mt-12 p-8 bg-gradient-to-r from-emerald/5 to-amber/5 rounded-xl">
                       <p className="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-emerald to-amber mb-4">
                         The future of sports broadcasting is intelligent, personalized, and more engaging than ever.
@@ -285,7 +285,7 @@ export default function AISportsCommentaryArticlePage() {
                     <p className="text-sm text-muted-foreground italic mt-8 text-center">
                       This article explores the potential applications and implications of AI in sports commentary. The future of sports broadcasting continues to evolve as technology advances and fan expectations change.
                     </p>
-                  </SlideIn>
+                  </FadeIn>
                 </div>
               </CardContent>
             </Card>

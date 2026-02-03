@@ -59,33 +59,33 @@ export default function GradGearExperience() {
 
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             <div className="lg:col-span-2">
-              <SlideIn direction="up">
+              <FadeIn>
                 <div className="flex flex-wrap items-center gap-3 mb-4">
                   <Badge className="badge-amber">Co-Founder</Badge>
                   <Badge className="badge-emerald">Active Startup</Badge>
                   <Badge variant="outline">2024 - Present</Badge>
                 </div>
-              </SlideIn>
+              </FadeIn>
 
-              <SlideIn direction="up" delay={0.1}>
+              <FadeIn delay={0.1}>
                 <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-4 leading-tight">
                   GradGear
                 </h1>
                 <p className="text-xl text-amber font-medium mb-4">
                   AI-Powered Laptop Consultancy & Recommendation Service
                 </p>
-              </SlideIn>
+              </FadeIn>
 
-              <SlideIn direction="up" delay={0.2}>
+              <FadeIn delay={0.2}>
                 <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
                   Co-founded an AI-driven consultancy startup that leverages machine learning algorithms and comprehensive
                   market data to deliver personalized, unbiased laptop recommendations. GradGear addresses the overwhelming
                   complexity of laptop selection by providing data-driven insights tailored to individual user requirements,
                   budget constraints, and use-case scenarios.
                 </p>
-              </SlideIn>
+              </FadeIn>
 
-              <SlideIn direction="up" delay={0.3}>
+              <FadeIn delay={0.3}>
                 <div className="flex flex-wrap gap-4">
                   <Button asChild className="bg-amber hover:bg-amber/90 text-white">
                     <Link href="https://gardgear.github.io/GradGear/" target="_blank" rel="noopener noreferrer">
@@ -100,7 +100,7 @@ export default function GradGearExperience() {
                     </Link>
                   </Button>
                 </div>
-              </SlideIn>
+              </FadeIn>
             </div>
 
             <SlideIn direction="right" delay={0.3}>
