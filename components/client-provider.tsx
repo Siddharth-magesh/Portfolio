@@ -1,15 +1,11 @@
 "use client"
 
-import { useEffect, useState } from "react"
 import { LoadingProvider } from "@/contexts/LoadingContext"
 import { GlobalLoadingOverlay } from "@/components/global-loading-overlay"
+import { useMounted } from "@/hooks/use-mounted"
 
 export function ClientProvider({ children }: { children: React.ReactNode }) {
-  const [mounted, setMounted] = useState(false)
-
-  useEffect(() => {
-    setMounted(true)
-  }, [])
+  const mounted = useMounted()
 
   if (!mounted) {
     return <>{children}</>

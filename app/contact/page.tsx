@@ -1,39 +1,62 @@
 "use client"
 
 import { useState } from "react"
+import { useForm } from "react-hook-form"
+import { zodResolver } from "@hookform/resolvers/zod"
+import { z } from "zod"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
-import { Mail, Phone, MapPin, Linkedin, Github, Coffee, Users, Database, CheckCircle, AlertCircle } from "lucide-react"
+import { Mail, Phone, MapPin, Linkedin, Github, Coffee, Users, Database, CheckCircle, AlertCircle, Loader2 } from "lucide-react"
 import { Navigation } from "@/components/navigation"
 import { Footer } from "@/components/footer"
 import emailjs from '@emailjs/browser'
 
+// Form validation schema
+const contactSchema = z.object({
+  firstName: z.string()
+    .min(2, "First name must be at least 2 characters")
+    .max(50, "First name must be less than 50 characters"),
+  lastName: z.string()
+    .min(2, "Last name must be at least 2 characters")
+    .max(50, "Last name must be less than 50 characters"),
+  email: z.string()
+    .email("Please enter a valid email address"),
+  subject: z.string()
+    .min(5, "Subject must be at least 5 characters")
+    .max(100, "Subject must be less than 100 characters"),
+  message: z.string()
+    .min(20, "Message must be at least 20 characters")
+    .max(2000, "Message must be less than 2000 characters"),
+})
+
+type ContactFormData = z.infer<typeof contactSchema>
+
 export default function ContactPage() {
-  const [formData, setFormData] = useState({
-    firstName: '',
-    lastName: '',
-    email: '',
-    subject: '',
-    message: ''
-  })
   const [isLoading, setIsLoading] = useState(false)
   const [status, setStatus] = useState<{
     type: 'success' | 'error' | null
     message: string
   }>({ type: null, message: '' })
 
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    const { name, value } = e.target
-    setFormData(prev => ({
-      ...prev,
-      [name]: value
-    }))
-  }
+  const {
+    register,
+    handleSubmit,
+    reset,
+    formState: { errors }
+  } = useForm<ContactFormData>({
+    resolver: zodResolver(contactSchema),
+    defaultValues: {
+      firstName: '',
+      lastName: '',
+      email: '',
+      subject: '',
+      message: ''
+    }
+  })
 
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault()
+  const onSubmit = async (data: ContactFormData) => {
     setIsLoading(true)
     setStatus({ type: null, message: '' })
 
@@ -46,10 +69,10 @@ export default function ContactPage() {
         process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID || '',
         process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID || '',
         {
-          from_name: `${formData.firstName} ${formData.lastName}`,
-          from_email: formData.email,
-          subject: formData.subject,
-          message: formData.message,
+          from_name: `${data.firstName} ${data.lastName}`,
+          from_email: data.email,
+          subject: data.subject,
+          message: data.message,
           to_name: 'Siddharth Magesh',
         }
       )
@@ -60,13 +83,7 @@ export default function ContactPage() {
           message: 'Thank you! Your message has been sent successfully. I\'ll get back to you soon.'
         })
         // Reset form
-        setFormData({
-          firstName: '',
-          lastName: '',
-          email: '',
-          subject: '',
-          message: ''
-        })
+        reset()
       } else {
         throw new Error('Failed to send message')
       }
@@ -207,15 +224,15 @@ export default function ContactPage() {
                 <div className="space-y-3">
                   <div className="flex items-center justify-between">
                     <span className="text-sm font-medium">Research Collaborations</span>
-                    <span className="text-xs bg-green-100 text-green-800 px-2 py-1 rounded-full">Available</span>
+                    <span className="text-xs bg-success-muted text-success-foreground px-2 py-1 rounded-full dark:bg-success/20 dark:text-success">Available</span>
                   </div>
                   <div className="flex items-center justify-between">
                     <span className="text-sm font-medium">Consulting Projects</span>
-                    <span className="text-xs bg-green-100 text-green-800 px-2 py-1 rounded-full">Available</span>
+                    <span className="text-xs bg-success-muted text-success-foreground px-2 py-1 rounded-full dark:bg-success/20 dark:text-success">Available</span>
                   </div>
                   <div className="flex items-center justify-between">
                     <span className="text-sm font-medium">Speaking Engagements</span>
-                    <span className="text-xs bg-green-100 text-green-800 px-2 py-1 rounded-full">Available</span>
+                    <span className="text-xs bg-success-muted text-success-foreground px-2 py-1 rounded-full dark:bg-success/20 dark:text-success">Available</span>
                   </div>
                 </div>
               </CardContent>
@@ -232,9 +249,9 @@ export default function ContactPage() {
               <CardContent>
                 {status.type && (
                   <div className={`mb-6 p-4 rounded-lg flex items-center gap-3 ${
-                    status.type === 'success' 
-                      ? 'bg-green-50 text-green-800 border border-green-200' 
-                      : 'bg-red-50 text-red-800 border border-red-200'
+                    status.type === 'success'
+                      ? 'bg-success-muted text-success-foreground border border-success/30 dark:bg-success/10 dark:text-success dark:border-success/20'
+                      : 'bg-destructive/10 text-destructive border border-destructive/30'
                   }`}>
                     {status.type === 'success' ? (
                       <CheckCircle className="h-5 w-5" />
@@ -245,35 +262,37 @@ export default function ContactPage() {
                   </div>
                 )}
                 
-                <form onSubmit={handleSubmit} className="space-y-6">
+                <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
                   <div className="grid grid-cols-2 gap-4">
                     <div>
                       <label htmlFor="firstName" className="block text-sm font-medium text-foreground mb-2">
                         First Name *
                       </label>
-                      <Input 
-                        id="firstName" 
-                        name="firstName"
-                        value={formData.firstName}
-                        onChange={handleInputChange}
-                        placeholder="John" 
-                        required
+                      <Input
+                        id="firstName"
+                        {...register("firstName")}
+                        placeholder="John"
                         disabled={isLoading}
+                        className={errors.firstName ? "border-destructive focus-visible:ring-destructive" : ""}
                       />
+                      {errors.firstName && (
+                        <p className="mt-1 text-sm text-destructive">{errors.firstName.message}</p>
+                      )}
                     </div>
                     <div>
                       <label htmlFor="lastName" className="block text-sm font-medium text-foreground mb-2">
                         Last Name *
                       </label>
-                      <Input 
-                        id="lastName" 
-                        name="lastName"
-                        value={formData.lastName}
-                        onChange={handleInputChange}
-                        placeholder="Doe" 
-                        required
+                      <Input
+                        id="lastName"
+                        {...register("lastName")}
+                        placeholder="Doe"
                         disabled={isLoading}
+                        className={errors.lastName ? "border-destructive focus-visible:ring-destructive" : ""}
                       />
+                      {errors.lastName && (
+                        <p className="mt-1 text-sm text-destructive">{errors.lastName.message}</p>
+                      )}
                     </div>
                   </div>
 
@@ -281,31 +300,33 @@ export default function ContactPage() {
                     <label htmlFor="email" className="block text-sm font-medium text-foreground mb-2">
                       Email Address *
                     </label>
-                    <Input 
-                      id="email" 
-                      name="email"
-                      type="email" 
-                      value={formData.email}
-                      onChange={handleInputChange}
-                      placeholder="john@example.com" 
-                      required
+                    <Input
+                      id="email"
+                      type="email"
+                      {...register("email")}
+                      placeholder="john@example.com"
                       disabled={isLoading}
+                      className={errors.email ? "border-destructive focus-visible:ring-destructive" : ""}
                     />
+                    {errors.email && (
+                      <p className="mt-1 text-sm text-destructive">{errors.email.message}</p>
+                    )}
                   </div>
 
                   <div>
                     <label htmlFor="subject" className="block text-sm font-medium text-foreground mb-2">
                       Subject *
                     </label>
-                    <Input 
-                      id="subject" 
-                      name="subject"
-                      value={formData.subject}
-                      onChange={handleInputChange}
-                      placeholder="Research Collaboration Opportunity" 
-                      required
+                    <Input
+                      id="subject"
+                      {...register("subject")}
+                      placeholder="Research Collaboration Opportunity"
                       disabled={isLoading}
+                      className={errors.subject ? "border-destructive focus-visible:ring-destructive" : ""}
                     />
+                    {errors.subject && (
+                      <p className="mt-1 text-sm text-destructive">{errors.subject.message}</p>
+                    )}
                   </div>
 
                   <div>
@@ -314,20 +335,21 @@ export default function ContactPage() {
                     </label>
                     <Textarea
                       id="message"
-                      name="message"
                       rows={6}
-                      value={formData.message}
-                      onChange={handleInputChange}
+                      {...register("message")}
                       placeholder="Tell me about your project, research idea, or how we can collaborate..."
-                      required
                       disabled={isLoading}
+                      className={errors.message ? "border-destructive focus-visible:ring-destructive" : ""}
                     />
+                    {errors.message && (
+                      <p className="mt-1 text-sm text-destructive">{errors.message.message}</p>
+                    )}
                   </div>
 
                   <Button type="submit" className="w-full" disabled={isLoading}>
                     {isLoading ? (
                       <>
-                        <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-white mr-2"></div>
+                        <Loader2 className="h-4 w-4 mr-2 animate-spin" />
                         Sending...
                       </>
                     ) : (

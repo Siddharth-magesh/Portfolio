@@ -38,6 +38,34 @@
   --sidebar-accent-foreground: oklch(1 0 0);
   --sidebar-border: oklch(0.9 0 0);
   --sidebar-ring: oklch(0.25 0.15 264 / 0.5);
+
+  /* Semantic colors for status indicators */
+  --success: oklch(0.65 0.2 145); /* Green */
+  --success-foreground: oklch(0.3 0.1 145);
+  --success-muted: oklch(0.95 0.05 145);
+  --warning: oklch(0.75 0.15 85); /* Amber/Yellow */
+  --warning-foreground: oklch(0.4 0.1 85);
+  --warning-muted: oklch(0.95 0.05 85);
+  --info: oklch(0.6 0.15 250); /* Blue */
+  --info-foreground: oklch(0.3 0.1 250);
+  --info-muted: oklch(0.95 0.05 250);
+
+  /* Additional accent colors for visual variety */
+  --emerald: oklch(0.6 0.18 160); /* Emerald green */
+  --emerald-foreground: oklch(0.98 0 0);
+  --emerald-muted: oklch(0.95 0.05 160);
+  --violet: oklch(0.55 0.2 290); /* Violet purple */
+  --violet-foreground: oklch(0.98 0 0);
+  --violet-muted: oklch(0.95 0.05 290);
+  --amber: oklch(0.75 0.18 75); /* Warm amber */
+  --amber-foreground: oklch(0.25 0.05 75);
+  --amber-muted: oklch(0.95 0.05 75);
+  --rose: oklch(0.6 0.2 15); /* Rose pink */
+  --rose-foreground: oklch(0.98 0 0);
+  --rose-muted: oklch(0.95 0.05 15);
+  --teal: oklch(0.6 0.15 185); /* Teal */
+  --teal-foreground: oklch(0.98 0 0);
+  --teal-muted: oklch(0.95 0.05 185);
 }
 
 .dark {
@@ -73,6 +101,34 @@
   --sidebar-accent-foreground: oklch(0.985 0 0);
   --sidebar-border: oklch(0.269 0 0);
   --sidebar-ring: oklch(0.439 0 0);
+
+  /* Semantic colors for status indicators (dark mode) */
+  --success: oklch(0.7 0.18 145);
+  --success-foreground: oklch(0.9 0.05 145);
+  --success-muted: oklch(0.25 0.08 145);
+  --warning: oklch(0.75 0.15 85);
+  --warning-foreground: oklch(0.9 0.05 85);
+  --warning-muted: oklch(0.25 0.08 85);
+  --info: oklch(0.65 0.15 250);
+  --info-foreground: oklch(0.9 0.05 250);
+  --info-muted: oklch(0.25 0.08 250);
+
+  /* Additional accent colors (dark mode) */
+  --emerald: oklch(0.65 0.18 160);
+  --emerald-foreground: oklch(0.98 0 0);
+  --emerald-muted: oklch(0.25 0.08 160);
+  --violet: oklch(0.6 0.2 290);
+  --violet-foreground: oklch(0.98 0 0);
+  --violet-muted: oklch(0.25 0.08 290);
+  --amber: oklch(0.75 0.18 75);
+  --amber-foreground: oklch(0.15 0.05 75);
+  --amber-muted: oklch(0.25 0.08 75);
+  --rose: oklch(0.65 0.2 15);
+  --rose-foreground: oklch(0.98 0 0);
+  --rose-muted: oklch(0.25 0.08 15);
+  --teal: oklch(0.65 0.15 185);
+  --teal-foreground: oklch(0.98 0 0);
+  --teal-muted: oklch(0.25 0.08 185);
 }
 
 @theme inline {
@@ -112,6 +168,34 @@
   --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-ring: var(--sidebar-ring);
+
+  /* Semantic color mappings */
+  --color-success: var(--success);
+  --color-success-foreground: var(--success-foreground);
+  --color-success-muted: var(--success-muted);
+  --color-warning: var(--warning);
+  --color-warning-foreground: var(--warning-foreground);
+  --color-warning-muted: var(--warning-muted);
+  --color-info: var(--info);
+  --color-info-foreground: var(--info-foreground);
+  --color-info-muted: var(--info-muted);
+
+  /* Additional accent color mappings */
+  --color-emerald: var(--emerald);
+  --color-emerald-foreground: var(--emerald-foreground);
+  --color-emerald-muted: var(--emerald-muted);
+  --color-violet: var(--violet);
+  --color-violet-foreground: var(--violet-foreground);
+  --color-violet-muted: var(--violet-muted);
+  --color-amber: var(--amber);
+  --color-amber-foreground: var(--amber-foreground);
+  --color-amber-muted: var(--amber-muted);
+  --color-rose: var(--rose);
+  --color-rose-foreground: var(--rose-foreground);
+  --color-rose-muted: var(--rose-muted);
+  --color-teal: var(--teal);
+  --color-teal-foreground: var(--teal-foreground);
+  --color-teal-muted: var(--teal-muted);
 }
 
 @layer base {
@@ -122,6 +206,24 @@
     @apply bg-background text-foreground;
   }
 
+  /* Global focus-visible styles for accessibility */
+  :focus-visible {
+    @apply outline-none ring-2 ring-primary ring-offset-2 ring-offset-background;
+  }
+
+  /* Screen reader only utility */
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+  }
+
   /* Added custom typography styles for the portfolio */
   h1,
   h2,
@@ -130,14 +232,15 @@
   h5,
   h6 {
     @apply font-bold text-primary;
+    text-wrap: balance;
   }
 
   h1 {
-    @apply text-4xl lg:text-5xl leading-tight;
+    @apply text-4xl lg:text-5xl leading-tight tracking-tight;
   }
 
   h2 {
-    @apply text-3xl lg:text-4xl leading-tight;
+    @apply text-3xl lg:text-4xl leading-tight tracking-tight;
   }
 
   h3 {
@@ -154,5 +257,218 @@
 
   .container-max {
     @apply max-w-6xl mx-auto;
+  }
+}
+
+/* Enhanced button styles */
+@layer components {
+  .btn-glow {
+    @apply relative overflow-hidden;
+  }
+
+  .btn-glow::before {
+    content: "";
+    @apply absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full;
+    transition: transform 0.5s ease;
+  }
+
+  .btn-glow:hover::before {
+    @apply translate-x-full;
+  }
+
+  /* Card enhancements */
+  .card-hover-lift {
+    @apply transition-all duration-300 ease-out;
+  }
+
+  .card-hover-lift:hover {
+    @apply -translate-y-1 shadow-xl;
+  }
+
+  /* Gradient text utility */
+  .gradient-text {
+    @apply bg-gradient-to-r from-primary to-blue-600 bg-clip-text text-transparent;
+  }
+
+  /* Subtle border glow on hover */
+  .border-glow {
+    @apply transition-shadow duration-300;
+  }
+
+  .border-glow:hover {
+    box-shadow: 0 0 20px rgba(59, 130, 246, 0.15);
+  }
+
+  /* Smooth image hover zoom */
+  .img-hover-zoom {
+    @apply overflow-hidden;
+  }
+
+  .img-hover-zoom img {
+    @apply transition-transform duration-500 ease-out;
+  }
+
+  .img-hover-zoom:hover img {
+    @apply scale-105;
+  }
+
+  /* Animated underline for links */
+  .link-underline {
+    @apply relative;
+  }
+
+  .link-underline::after {
+    content: "";
+    @apply absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all duration-300;
+  }
+
+  .link-underline:hover::after {
+    @apply w-full;
+  }
+
+  /* Badge variants */
+  .badge-gradient {
+    @apply bg-gradient-to-r from-primary/10 to-blue-500/10 text-primary border-primary/20;
+  }
+
+  /* Theme-aware status badges */
+  .badge-success {
+    @apply bg-success-muted text-success-foreground border-success/30;
+  }
+
+  .badge-warning {
+    @apply bg-warning-muted text-warning-foreground border-warning/30;
+  }
+
+  .badge-info {
+    @apply bg-info-muted text-info-foreground border-info/30;
+  }
+
+  .badge-neutral {
+    @apply bg-muted text-muted-foreground border-border;
+  }
+
+  /* Theme-aware category pill (for "AI Researcher", etc.) */
+  .category-pill {
+    @apply px-4 py-2 text-sm font-semibold bg-muted text-foreground border border-border rounded-full;
+  }
+
+  /* Theme-aware certificate/link hover */
+  .link-card {
+    @apply block p-2 rounded transition-colors hover:bg-muted;
+  }
+
+  /* Theme-aware icon colors */
+  .icon-primary {
+    @apply text-primary;
+  }
+
+  .icon-success {
+    @apply text-success;
+  }
+
+  .icon-info {
+    @apply text-info;
+  }
+
+  .icon-warning {
+    @apply text-warning;
+  }
+
+  /* Additional accent badge styles */
+  .badge-emerald {
+    @apply bg-emerald-muted text-emerald border-emerald/30;
+  }
+
+  .badge-violet {
+    @apply bg-violet-muted text-violet border-violet/30;
+  }
+
+  .badge-amber {
+    @apply bg-amber-muted text-amber-foreground border-amber/30;
+  }
+
+  .badge-rose {
+    @apply bg-rose-muted text-rose border-rose/30;
+  }
+
+  .badge-teal {
+    @apply bg-teal-muted text-teal border-teal/30;
+  }
+
+  /* Accent icon colors */
+  .icon-emerald {
+    @apply text-emerald;
+  }
+
+  .icon-violet {
+    @apply text-violet;
+  }
+
+  .icon-amber {
+    @apply text-amber;
+  }
+
+  .icon-rose {
+    @apply text-rose;
+  }
+
+  .icon-teal {
+    @apply text-teal;
+  }
+
+  /* Accent background utilities */
+  .bg-accent-emerald {
+    @apply bg-emerald/10;
+  }
+
+  .bg-accent-violet {
+    @apply bg-violet/10;
+  }
+
+  .bg-accent-amber {
+    @apply bg-amber/10;
+  }
+
+  .bg-accent-rose {
+    @apply bg-rose/10;
+  }
+
+  .bg-accent-teal {
+    @apply bg-teal/10;
+  }
+
+  /* Section divider gradients */
+  .section-gradient-emerald {
+    @apply bg-gradient-to-br from-emerald/5 via-transparent to-emerald/10;
+  }
+
+  .section-gradient-violet {
+    @apply bg-gradient-to-br from-violet/5 via-transparent to-violet/10;
+  }
+
+  .section-gradient-amber {
+    @apply bg-gradient-to-br from-amber/5 via-transparent to-amber/10;
+  }
+
+  /* Card accent borders */
+  .card-accent-emerald {
+    @apply border-l-4 border-l-emerald;
+  }
+
+  .card-accent-violet {
+    @apply border-l-4 border-l-violet;
+  }
+
+  .card-accent-amber {
+    @apply border-l-4 border-l-amber;
+  }
+
+  .card-accent-rose {
+    @apply border-l-4 border-l-rose;
+  }
+
+  .card-accent-teal {
+    @apply border-l-4 border-l-teal;
   }
 }
