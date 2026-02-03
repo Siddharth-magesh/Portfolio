@@ -1,7 +1,8 @@
 "use client"
 
-import React, { createContext, useContext, useState, ReactNode, useEffect } from 'react'
+import React, { createContext, useContext, useState, ReactNode } from 'react'
 import { useRouter } from 'next/navigation'
+import { useMounted } from '@/hooks/use-mounted'
 
 interface LoadingContextType {
   isLoading: boolean
@@ -12,20 +13,17 @@ const LoadingContext = createContext<LoadingContextType | undefined>(undefined)
 
 export function LoadingProvider({ children }: { children: ReactNode }) {
   const [isLoading, setIsLoading] = useState(false)
-  const [mounted, setMounted] = useState(false)
+  const mounted = useMounted()
   const router = useRouter()
-
-  useEffect(() => {
-    setMounted(true)
-  }, [])
 
   const triggerLoading = (path: string = '/') => {
     if (!mounted) return
     setIsLoading(true)
+    // Reduced from 3000ms to 1650ms to match faster loading screen
     setTimeout(() => {
       setIsLoading(false)
       router.push(path)
-    }, 3000)
+    }, 1650)
   }
 
   // Don't render until mounted to avoid hydration mismatch

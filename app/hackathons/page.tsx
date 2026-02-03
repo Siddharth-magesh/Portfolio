@@ -22,9 +22,9 @@ const EventImage = ({ src, alt, className = "", width = 600, height = 400 }: {
 
   if (hasError) {
     return (
-      <div className={`bg-gradient-to-br from-slate-100 to-slate-200 flex items-center justify-center ${className}`}>
+      <div className={`bg-gradient-to-br from-muted to-muted/50 flex items-center justify-center ${className}`}>
         <div className="text-center p-6">
-          <Code className="h-12 w-12 text-slate-500 mx-auto mb-2" />
+          <Code className="h-12 w-12 text-muted-foreground mx-auto mb-2" />
           <p className="text-sm text-muted-foreground">{alt}</p>
         </div>
       </div>
@@ -52,7 +52,7 @@ export default function HackathonsPage() {
       <section className="section-padding">
         <div className="container-max">
           <div className="text-center mb-12">
-            <Badge variant="secondary" className="mb-4 px-4 py-2 bg-slate-100 text-slate-800 border border-slate-200">
+            <Badge variant="secondary" className="category-pill">
               Competitive Programming & Innovation
             </Badge>
             <h1 className="font-heading text-4xl md:text-5xl font-bold mb-6">Hackathons & Competitive Events</h1>
@@ -67,24 +67,24 @@ export default function HackathonsPage() {
         <div className="container-max">
           <div className="mb-8 text-center">
             <h2 className="font-heading text-3xl font-bold mb-4 flex items-center justify-center gap-3">
-              <Trophy className="h-8 w-8 text-slate-700" />
+              <Trophy className="h-8 w-8 text-primary" />
               Achievements & Wins
             </h2>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {/* Title Winner - INNOTHAN'24 */}
-            <Card className="border-slate-200 bg-gradient-to-br from-slate-50 to-slate-100 overflow-hidden">
+            <Card className="border-border bg-gradient-to-br from-background to-muted/50 overflow-hidden hover:shadow-lg transition-shadow">
               <div className="aspect-video">
-                <EventImage 
-                  src="/hackathons/innothan-24.jpg" 
-                  alt="INNOTHAN'24 Event" 
-                  className="w-full h-full object-cover" 
+                <EventImage
+                  src="/hackathons/innothan-24.jpg"
+                  alt="INNOTHAN'24 Event"
+                  className="w-full h-full object-cover"
                 />
               </div>
               <CardHeader>
                 <div className="flex items-center justify-between mb-2">
-                  <Badge className="bg-slate-700 hover:bg-slate-800 text-white">Title Winner</Badge>
+                  <Badge className="bg-primary hover:bg-primary/90 text-primary-foreground">Title Winner</Badge>
                   <Badge variant="outline">2024</Badge>
                 </div>
                 <CardTitle className="text-xl">INNOTHAN'24</CardTitle>
@@ -93,17 +93,17 @@ export default function HackathonsPage() {
             </Card>
 
             {/* Special Winner - PRABHIGNYAN */}
-            <Card className="border-slate-200 bg-gradient-to-br from-slate-50 to-slate-100 overflow-hidden">
+            <Card className="border-border bg-gradient-to-br from-background to-muted/50 overflow-hidden hover:shadow-lg transition-shadow">
               <div className="aspect-video">
-                <EventImage 
-                  src="/hackathons/prabhignyan.jpg" 
-                  alt="PRABHIGNYAN Event" 
-                  className="w-full h-full object-cover" 
+                <EventImage
+                  src="/hackathons/prabhignyan.jpg"
+                  alt="PRABHIGNYAN Event"
+                  className="w-full h-full object-cover"
                 />
               </div>
               <CardHeader>
                 <div className="flex items-center justify-between mb-2">
-                  <Badge className="bg-slate-700 hover:bg-slate-800 text-white">Special Winner</Badge>
+                  <Badge className="bg-primary hover:bg-primary/90 text-primary-foreground">Special Winner</Badge>
                   <Badge variant="outline">2024</Badge>
                 </div>
                 <CardTitle className="text-xl">PRABHIGNYAN</CardTitle>
@@ -112,17 +112,17 @@ export default function HackathonsPage() {
             </Card>
 
             {/* Third Prize - Tech Genesis'25 */}
-            <Card className="border-slate-200 bg-gradient-to-br from-slate-50 to-slate-100 overflow-hidden">
+            <Card className="border-border bg-gradient-to-br from-background to-muted/50 overflow-hidden hover:shadow-lg transition-shadow">
               <div className="aspect-video">
-                <EventImage 
-                  src="/hackathons/tech-genesis-25.jpg" 
-                  alt="Tech Genesis'25 Event" 
-                  className="w-full h-full object-cover" 
+                <EventImage
+                  src="/hackathons/tech-genesis-25.jpg"
+                  alt="Tech Genesis'25 Event"
+                  className="w-full h-full object-cover"
                 />
               </div>
               <CardHeader>
                 <div className="flex items-center justify-between mb-2">
-                  <Badge className="bg-slate-600 hover:bg-slate-700 text-white">Third Prize</Badge>
+                  <Badge className="bg-secondary hover:bg-secondary/90 text-secondary-foreground">Third Prize</Badge>
                   <Badge variant="outline">2025</Badge>
                 </div>
                 <CardTitle className="text-xl">Tech Genesis'25</CardTitle>
@@ -131,17 +131,17 @@ export default function HackathonsPage() {
             </Card>
 
             {/* Second Prize - Ideathon */}
-            <Card className="border-slate-200 bg-gradient-to-br from-slate-50 to-slate-100 overflow-hidden">
+            <Card className="border-border bg-gradient-to-br from-background to-muted/50 overflow-hidden hover:shadow-lg transition-shadow">
               <div className="aspect-video">
-                <EventImage 
-                  src="/hackathons/ideathon.jpg" 
-                  alt="Ideathon Event" 
-                  className="w-full h-full object-cover" 
+                <EventImage
+                  src="/hackathons/ideathon.jpg"
+                  alt="Ideathon Event"
+                  className="w-full h-full object-cover"
                 />
               </div>
               <CardHeader>
                 <div className="flex items-center justify-between mb-2">
-                  <Badge className="bg-slate-600 hover:bg-slate-700 text-white">Second Prize</Badge>
+                  <Badge className="bg-secondary hover:bg-secondary/90 text-secondary-foreground">Second Prize</Badge>
                   <Badge variant="outline">2024</Badge>
                 </div>
                 <CardTitle className="text-xl">Ideathon</CardTitle>
@@ -389,59 +389,59 @@ export default function HackathonsPage() {
           {/* Team Photos Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
             <Card className="overflow-hidden">
-              <div className="aspect-square">
-                <EventImage 
-                  src="/hackathons/team-photo-1.jpg" 
-                  alt="BlackOps Team Photo 1" 
-                  className="w-full h-full object-cover" 
-                />
-              </div>
+              <EventImage
+                src="/hackathons/team-photo-1.jpg"
+                alt="BlackOps Team Photo 1"
+                className="w-full h-auto object-contain"
+                width={400}
+                height={400}
+              />
             </Card>
             <Card className="overflow-hidden">
-              <div className="aspect-square">
-                <EventImage 
-                  src="/hackathons/team-photo-2.jpg" 
-                  alt="BlackOps Team Photo 2" 
-                  className="w-full h-full object-cover" 
-                />
-              </div>
+              <EventImage
+                src="/hackathons/team-photo-2.jpg"
+                alt="BlackOps Team Photo 2"
+                className="w-full h-auto object-contain"
+                width={400}
+                height={400}
+              />
             </Card>
             <Card className="overflow-hidden">
-              <div className="aspect-square">
-                <EventImage 
-                  src="/hackathons/team-photo-3.jpg" 
-                  alt="BlackOps Team Photo 3" 
-                  className="w-full h-full object-cover" 
-                />
-              </div>
+              <EventImage
+                src="/hackathons/team-photo-3.jpg"
+                alt="BlackOps Team Photo 3"
+                className="w-full h-auto object-contain"
+                width={400}
+                height={400}
+              />
             </Card>
             <Card className="overflow-hidden md:col-span-2">
-              <div className="aspect-video">
-                <EventImage 
-                  src="/hackathons/team-group-photo.jpg" 
-                  alt="BlackOps Team Group Photo" 
-                  className="w-full h-full object-cover" 
-                />
-              </div>
+              <EventImage
+                src="/hackathons/team-group-photo.jpg"
+                alt="BlackOps Team Group Photo"
+                className="w-full h-auto object-contain"
+                width={800}
+                height={450}
+              />
             </Card>
-            <Card className="overflow-hidden">
-              <div className="aspect-square">
-                <EventImage 
-                  src="/hackathons/team-photo-5.jpg" 
-                  alt="BlackOps Team Photo 5" 
-                  className="w-full h-full object-cover" 
-                />
-              </div>
+            <Card className="overflow-hidden row-span-2">
+              <EventImage
+                src="/hackathons/team-photo-5.jpg"
+                alt="BlackOps Team Photo 5"
+                className="w-full h-auto object-contain"
+                width={400}
+                height={400}
+              />
               <CardContent className="p-6">
                 <div className="text-center">
-                  <h3 className="text-lg font-bold text-slate-800 mb-4">Founding Members</h3>
+                  <h3 className="text-lg font-bold text-foreground mb-4">Founding Members</h3>
                   <div className="space-y-2 mb-4">
-                    <p className="text-sm font-medium text-slate-700">Siddharth Magesh</p>
-                    <p className="text-sm font-medium text-slate-700">Pranesh Kumar V</p>
-                    <p className="text-sm font-medium text-slate-700">Samuel Stephen Deva Paul</p>
-                    <p className="text-sm font-medium text-slate-700">Waatson J</p>
-                    <p className="text-sm font-medium text-slate-700">Arjun V L</p>
-                    <p className="text-sm font-medium text-slate-700">Mohammad Yasir</p>
+                    <p className="text-sm font-medium text-foreground">Siddharth Magesh</p>
+                    <p className="text-sm font-medium text-foreground">Pranesh Kumar V</p>
+                    <p className="text-sm font-medium text-foreground">Samuel Stephen Deva Paul</p>
+                    <p className="text-sm font-medium text-foreground">Waatson J</p>
+                    <p className="text-sm font-medium text-foreground">Arjun V L</p>
+                    <p className="text-sm font-medium text-foreground">Mohammad Yasir</p>
                   </div>
                   <p className="text-xs text-muted-foreground italic leading-relaxed">
                     "And to all those unlisted names, you still are part of this organization and your contributions matter."

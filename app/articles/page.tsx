@@ -1,6 +1,6 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import { Calendar, Clock, ArrowRight } from "lucide-react"
+import { Calendar, Clock, ArrowRight, ExternalLink } from "lucide-react"
 import Link from "next/link"
 import { Navigation } from "@/components/navigation"
 import { Footer } from "@/components/footer"
@@ -15,6 +15,7 @@ const articles = [
     readTime: "8 min read",
     publishDate: "2024-12-15",
     featured: true,
+    externalUrl: null,
   },
   {
     id: "agi-next-step-humanity",
@@ -25,6 +26,29 @@ const articles = [
     readTime: "12 min read",
     publishDate: "2025-08-28",
     featured: true,
+    externalUrl: null,
+  },
+  {
+    id: "rethinking-education-india",
+    title: "Rethinking Post-12 Education in India Through the National Agricultural Service",
+    description:
+      "A thought-provoking analysis of India's education system and how agricultural service initiatives could transform post-secondary education pathways for rural and urban students alike.",
+    category: "Education Policy",
+    readTime: "10 min read",
+    publishDate: "2026-01-20",
+    featured: true,
+    externalUrl: "https://medium.com/@siddharthmagesh007/rethinking-post-12-education-in-india-through-the-national-agricultural-service-70ef940cd02d",
+  },
+  {
+    id: "secure-remote-access-ssh-tailscale",
+    title: "Secure Remote Access to a Windows Machine from Debian Using SSH and Tailscale",
+    description:
+      "A comprehensive guide on establishing encrypted remote terminal access using OpenSSH and Tailscale, eliminating the need for port forwarding or dynamic IP management.",
+    category: "DevOps",
+    readTime: "8 min read",
+    publishDate: "2026-01-13",
+    featured: false,
+    externalUrl: "https://dev.to/siddharth_magesh_e12b8505/secure-remote-access-to-a-windows-machine-from-debian-using-ssh-and-tailscale-4og",
   },
   {
     id: "ai-sports-commentary-future",
@@ -35,6 +59,7 @@ const articles = [
     readTime: "10 min read",
     publishDate: "2025-08-28",
     featured: false,
+    externalUrl: null,
   },
   {
     id: "ai-replacing-humans-jobs",
@@ -45,6 +70,7 @@ const articles = [
     readTime: "14 min read",
     publishDate: "2025-08-28",
     featured: false,
+    externalUrl: null,
   }
 ]
 
@@ -75,7 +101,12 @@ export default function ArticlesPage() {
                 <Card key={article.id} className="group hover:shadow-lg transition-shadow">
                   <CardHeader>
                     <div className="flex items-center justify-between mb-2">
-                      <Badge variant="secondary">{article.category}</Badge>
+                      <div className="flex items-center gap-2">
+                        <Badge variant="secondary">{article.category}</Badge>
+                        {article.externalUrl && (
+                          <Badge variant="outline" className="text-xs">External</Badge>
+                        )}
+                      </div>
                       <div className="flex items-center gap-4 text-sm text-muted-foreground">
                         <div className="flex items-center gap-1">
                           <Calendar className="w-4 h-4" />
@@ -92,18 +123,34 @@ export default function ArticlesPage() {
                       </div>
                     </div>
                     <CardTitle className="group-hover:text-primary transition-colors">
-                      <Link href={`/articles/${article.id}`}>{article.title}</Link>
+                      {article.externalUrl ? (
+                        <a href={article.externalUrl} target="_blank" rel="noopener noreferrer">{article.title}</a>
+                      ) : (
+                        <Link href={`/articles/${article.id}`}>{article.title}</Link>
+                      )}
                     </CardTitle>
                     <CardDescription className="text-base">{article.description}</CardDescription>
                   </CardHeader>
                   <CardContent>
-                    <Link
-                      href={`/articles/${article.id}`}
-                      className="inline-flex items-center gap-2 text-primary hover:underline font-medium"
-                    >
-                      Read Article
-                      <ArrowRight className="w-4 h-4" />
-                    </Link>
+                    {article.externalUrl ? (
+                      <a
+                        href={article.externalUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-2 text-primary hover:underline font-medium"
+                      >
+                        Read on {article.externalUrl.includes('medium.com') ? 'Medium' : 'Dev.to'}
+                        <ExternalLink className="w-4 h-4" />
+                      </a>
+                    ) : (
+                      <Link
+                        href={`/articles/${article.id}`}
+                        className="inline-flex items-center gap-2 text-primary hover:underline font-medium"
+                      >
+                        Read Article
+                        <ArrowRight className="w-4 h-4" />
+                      </Link>
+                    )}
                   </CardContent>
                 </Card>
               ))}
@@ -121,6 +168,9 @@ export default function ArticlesPage() {
                       <div className="flex-1">
                         <div className="flex items-center gap-4 mb-3">
                           <Badge variant="outline">{article.category}</Badge>
+                          {article.externalUrl && (
+                            <Badge variant="outline" className="text-xs">External</Badge>
+                          )}
                           <div className="flex items-center gap-4 text-sm text-muted-foreground">
                             <div className="flex items-center gap-1">
                               <Calendar className="w-4 h-4" />
@@ -137,16 +187,32 @@ export default function ArticlesPage() {
                           </div>
                         </div>
                         <h3 className="text-xl font-semibold text-foreground mb-2 group-hover:text-primary transition-colors">
-                          <Link href={`/articles/${article.id}`}>{article.title}</Link>
+                          {article.externalUrl ? (
+                            <a href={article.externalUrl} target="_blank" rel="noopener noreferrer">{article.title}</a>
+                          ) : (
+                            <Link href={`/articles/${article.id}`}>{article.title}</Link>
+                          )}
                         </h3>
                         <p className="text-muted-foreground mb-4">{article.description}</p>
-                        <Link
-                          href={`/articles/${article.id}`}
-                          className="inline-flex items-center gap-2 text-primary hover:underline font-medium"
-                        >
-                          Read More
-                          <ArrowRight className="w-4 h-4" />
-                        </Link>
+                        {article.externalUrl ? (
+                          <a
+                            href={article.externalUrl}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-flex items-center gap-2 text-primary hover:underline font-medium"
+                          >
+                            Read on {article.externalUrl.includes('medium.com') ? 'Medium' : 'Dev.to'}
+                            <ExternalLink className="w-4 h-4" />
+                          </a>
+                        ) : (
+                          <Link
+                            href={`/articles/${article.id}`}
+                            className="inline-flex items-center gap-2 text-primary hover:underline font-medium"
+                          >
+                            Read More
+                            <ArrowRight className="w-4 h-4" />
+                          </Link>
+                        )}
                       </div>
                     </div>
                   </CardContent>

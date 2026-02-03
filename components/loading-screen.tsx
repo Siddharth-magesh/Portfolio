@@ -10,16 +10,17 @@ export function LoadingScreen({ onComplete }: LoadingScreenProps) {
   const [progress, setProgress] = useState(0)
 
   useEffect(() => {
+    // Faster loading: ~1.5 seconds total (50 steps × 30ms = 1500ms)
     const timer = setInterval(() => {
       setProgress((prev) => {
         if (prev >= 100) {
           clearInterval(timer)
-          setTimeout(onComplete, 200)
+          setTimeout(onComplete, 150)
           return 100
         }
         return prev + 2
       })
-    }, 60)
+    }, 30)
 
     return () => clearInterval(timer)
   }, [onComplete])
