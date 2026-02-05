@@ -26,7 +26,7 @@ const articles = [
     readTime: "12 min read",
     publishDate: "2025-08-28",
     featured: true,
-    externalUrl: null,
+    externalUrl: "https://medium.com/@siddharthmagesh007/agi-the-next-step-towards-humanity-cda6305ceebf",
   },
   {
     id: "rethinking-education-india",
@@ -132,7 +132,26 @@ export default function ArticlesPage() {
                     <CardDescription className="text-base">{article.description}</CardDescription>
                   </CardHeader>
                   <CardContent>
-                    {article.externalUrl ? (
+                    {article.id === "agi-next-step-humanity" ? (
+                      <div className="flex items-center gap-4">
+                        <Link
+                          href={`/articles/${article.id}`}
+                          className="inline-flex items-center gap-2 text-primary hover:underline font-medium"
+                        >
+                          Read Article
+                          <ArrowRight className="w-4 h-4" />
+                        </Link>
+                        <a
+                          href={article.externalUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center gap-2 text-primary hover:underline font-medium"
+                        >
+                          Read on Medium
+                          <ExternalLink className="w-4 h-4" />
+                        </a>
+                      </div>
+                    ) : article.externalUrl ? (
                       <a
                         href={article.externalUrl}
                         target="_blank"
@@ -194,7 +213,26 @@ export default function ArticlesPage() {
                           )}
                         </h3>
                         <p className="text-muted-foreground mb-4">{article.description}</p>
-                        {article.externalUrl ? (
+                        {article.id === "agi-next-step-humanity" ? (
+                          <div className="flex items-center gap-4">
+                            <Link
+                              href={`/articles/${article.id}`}
+                              className="inline-flex items-center gap-2 text-primary hover:underline font-medium"
+                            >
+                              Read More
+                              <ArrowRight className="w-4 h-4" />
+                            </Link>
+                            <a
+                              href={article.externalUrl}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="inline-flex items-center gap-2 text-primary hover:underline font-medium"
+                            >
+                              Read on Medium
+                              <ExternalLink className="w-4 h-4" />
+                            </a>
+                          </div>
+                        ) : article.externalUrl ? (
                           <a
                             href={article.externalUrl}
                             target="_blank"

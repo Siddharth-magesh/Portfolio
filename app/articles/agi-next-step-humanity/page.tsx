@@ -3,7 +3,7 @@
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
-import { Calendar, Clock, ArrowLeft, Lightbulb, Brain, Dna, Rocket, Atom, Heart, Sparkles, Zap, Globe, Binary, Infinity } from "lucide-react"
+import { Calendar, Clock, ArrowLeft, Lightbulb, Brain, Dna, Rocket, Atom, Heart, Sparkles, Zap, Globe, Binary, Infinity, ExternalLink } from "lucide-react"
 import Link from "next/link"
 import { FadeIn, StaggerContainer, StaggerItem } from "@/components/animations"
 
@@ -63,6 +63,21 @@ export default function AGIArticlePage() {
                 <p className="font-medium text-foreground">Siddharth Magesh</p>
                 <p className="text-sm text-muted-foreground">AI Researcher & Futurist</p>
               </div>
+            </div>
+          </FadeIn>
+
+          <FadeIn delay={0.4}>
+            <div className="mt-6">
+              <a 
+                href="https://medium.com/@siddharthmagesh007/agi-the-next-step-towards-humanity-cda6305ceebf" 
+                target="_blank" 
+                rel="noopener noreferrer"
+              >
+                <Button className="w-full sm:w-auto bg-gradient-to-r from-primary to-violet hover:from-primary/90 hover:to-violet/90 text-white">
+                  <ExternalLink className="w-4 h-4 mr-2" />
+                  Read on Medium
+                </Button>
+              </a>
             </div>
           </FadeIn>
         </div>
