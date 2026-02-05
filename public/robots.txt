@@ -1,0 +1,24 @@
+# Robots.txt for Siddharth Magesh Portfolio
+# https://www.robotstxt.org/robotstxt.html
+
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://siddharthmagesh.com/sitemap.xml
+
+# Disallow admin or private paths (if any)
+Disallow: /api/
+Disallow: /_next/
+Disallow: /static/
+
+# Allow all crawlers to index the main content
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+# Crawl-delay for respectful crawling
+User-agent: *
+Crawl-delay: 1
