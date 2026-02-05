@@ -142,7 +142,7 @@ export default function ArticlesPage() {
                           <ArrowRight className="w-4 h-4" />
                         </Link>
                         <a
-                          href={article.externalUrl}
+                          href={article.externalUrl!}
                           target="_blank"
                           rel="noopener noreferrer"
                           className="inline-flex items-center gap-2 text-primary hover:underline font-medium"
@@ -223,7 +223,7 @@ export default function ArticlesPage() {
                               <ArrowRight className="w-4 h-4" />
                             </Link>
                             <a
-                              href={article.externalUrl}
+                              href={article.externalUrl!}
                               target="_blank"
                               rel="noopener noreferrer"
                               className="inline-flex items-center gap-2 text-primary hover:underline font-medium"
