@@ -31,6 +31,61 @@ export default function ExperiencePage() {
       <section className="section-padding">
         <div className="container-max">
           <div className="space-y-8">
+            {/* IITM Brain Centre - LLM Researcher */}
+            <Card className="group hover:shadow-xl hover:shadow-violet-500/10 transition-all duration-300 border-l-4 border-l-violet-500">
+              <CardContent className="p-8">
+                <div className="grid grid-cols-1 lg:grid-cols-4 gap-6">
+                  <div className="lg:col-span-1">
+                    <div className="flex items-center space-x-2 mb-2">
+                      <Calendar className="h-4 w-4 text-violet-500" />
+                      <span className="text-sm text-muted-foreground">Dec 2025 - Feb 2026</span>
+                    </div>
+                    <div className="flex items-center space-x-2 mb-4">
+                      <MapPin className="h-4 w-4 text-violet-500" />
+                      <span className="text-sm text-muted-foreground">IIT Madras, Chennai</span>
+                    </div>
+                    <div className="flex flex-wrap gap-2">
+                      <Badge variant="outline">Completed</Badge>
+                      <Badge variant="outline" className="border-green-500 text-green-600 text-xs">NVIDIA</Badge>
+                    </div>
+                  </div>
+                  <div className="lg:col-span-3">
+                    <div className="flex items-start justify-between mb-4">
+                      <div>
+                        <h3 className="font-heading text-xl mb-1">
+                          LLM Researcher / Engineer – Sudha Gopalakrishnan Brain Centre
+                        </h3>
+                        <p className="text-violet-500 font-medium">IIT Madras (NVIDIA Partnered)</p>
+                      </div>
+                      <Building className="h-6 w-6 text-violet-500" />
+                    </div>
+                    <p className="text-muted-foreground mb-4 leading-relaxed">
+                      Developed and fine-tuned Vision-Language Models (VLMs) including OpenCLIP and BLIP-2 on 
+                      histology data for neuroscience research. Built internal AI tools for automated image 
+                      analysis, created production-ready inference pipelines deployed as Jenkins plugins, and 
+                      leveraged NVIDIA DGX A100 SuperPOD infrastructure for training large-scale models on 
+                      petabyte-scale brain imaging datasets.
+                    </p>
+                    <div className="flex flex-wrap gap-2 mb-4">
+                      <Badge variant="outline">OpenCLIP</Badge>
+                      <Badge variant="outline">Vision-Language Models</Badge>
+                      <Badge variant="outline">Histology Analysis</Badge>
+                      <Badge variant="outline">NVIDIA DGX A100</Badge>
+                      <Badge variant="outline">Jenkins</Badge>
+                      <Badge variant="outline">PyTorch</Badge>
+                      <Badge variant="outline">DeepSpeed</Badge>
+                      <Badge variant="outline">MLOps</Badge>
+                    </div>
+                    <Button asChild size="sm" className="hover:bg-violet-600 bg-violet-500">
+                      <Link href="/experience/iitm-brain-centre">
+                        View Details <ArrowRight className="ml-1 h-3 w-3" />
+                      </Link>
+                    </Button>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+
             {/* Scrapify AI Intern */}
             <Card className="group hover:shadow-xl hover:shadow-blue-500/10 transition-all duration-300 border-l-4 border-l-blue-500">
               <CardContent className="p-8">
