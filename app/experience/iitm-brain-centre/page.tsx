@@ -22,6 +22,8 @@ import {
   Layers,
   GitBranch,
   Rocket,
+  Download,
+  FileText,
 } from "lucide-react"
 import { FadeIn, SlideIn, StaggerContainer, StaggerItem } from "@/components/animations"
 
@@ -586,6 +588,45 @@ export default function IITMBrainCentrePage() {
               </Button>
             </div>
           </FadeIn>
+        </div>
+      </section>
+
+      {/* Documents & Resources */}
+      <section className="section-padding bg-muted/30">
+        <div className="container-max">
+          <FadeIn>
+            <h2 className="font-heading text-3xl mb-8">Documents & Resources</h2>
+          </FadeIn>
+          <StaggerContainer className="grid grid-cols-1 md:grid-cols-2 gap-6" staggerDelay={0.1}>
+            <StaggerItem>
+              <Card className="hover:shadow-md transition-shadow">
+                <CardHeader>
+                  <CardTitle className="font-heading text-lg flex items-center gap-2">
+                    <FileText className="h-5 w-5 text-violet" />
+                    Internship Certificate
+                  </CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-muted-foreground mb-4 text-sm">
+                    Official completion certificate from the Sudha Gopalakrishnan Brain Centre, IIT Madras, acknowledging LLM research and engineering contributions
+                  </p>
+                  <Button
+                    variant="outline"
+                    className="w-full"
+                    onClick={() => {
+                      const link = document.createElement("a")
+                      link.href = "/CERTIFICATIONS/Intern Certifications/SGBC/SGBC_certificate.pdf"
+                      link.download = "SGBC Internship Certificate.pdf"
+                      link.click()
+                    }}
+                  >
+                    <Download className="mr-2 h-4 w-4" />
+                    Download Certificate
+                  </Button>
+                </CardContent>
+              </Card>
+            </StaggerItem>
+          </StaggerContainer>
         </div>
       </section>
 
