@@ -16,7 +16,7 @@ export function LoadingProvider({ children }: { children: ReactNode }) {
   const mounted = useMounted()
   const router = useRouter()
 
-  const triggerLoading = (path: string = '/') => {
+  const triggerLoading = (path: string = '/archive') => {
     if (!mounted) return
     setIsLoading(true)
     // Reduced from 3000ms to 1650ms to match faster loading screen

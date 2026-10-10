@@ -11,15 +11,15 @@ import { useLoading } from "@/contexts/LoadingContext"
 import { useMounted } from "@/hooks/use-mounted"
 
 const navigationItems = [
-  { name: "Home", href: "/" },
-  { name: "About", href: "/about" },
-  { name: "Research", href: "/research" },
-  { name: "Experience", href: "/experience" },
-  { name: "Projects", href: "/projects" },
-  { name: "Leadership", href: "/leadership" },
-  { name: "Hackathons", href: "/hackathons" },
-  { name: "Articles", href: "/articles" },
-  { name: "Contact", href: "/contact" },
+  { name: "Home", href: "/archive" },
+  { name: "About", href: "/archive/about" },
+  { name: "Research", href: "/archive/research" },
+  { name: "Experience", href: "/archive/experience" },
+  { name: "Projects", href: "/archive/projects" },
+  { name: "Leadership", href: "/archive/leadership" },
+  { name: "Hackathons", href: "/archive/hackathons" },
+  { name: "Articles", href: "/archive/articles" },
+  { name: "Contact", href: "/archive/contact" },
 ]
 
 interface NavigationProps {
@@ -28,8 +28,8 @@ interface NavigationProps {
 
 // Helper to check if a nav item is active
 function isActiveLink(pathname: string, href: string): boolean {
-  if (href === "/") {
-    return pathname === "/"
+  if (href === "/archive") {
+    return pathname === "/archive"
   }
   return pathname.startsWith(href)
 }
@@ -64,7 +64,7 @@ export function Navigation({ onLogoClick }: NavigationProps) {
     if (onLogoClick) {
       onLogoClick()
     } else {
-      triggerLoading('/')
+      triggerLoading('/archive')
     }
   }
 
@@ -78,7 +78,7 @@ export function Navigation({ onLogoClick }: NavigationProps) {
         <div className="flex items-center justify-between h-16">
           {/* Logo - Left aligned */}
           <div className="flex-shrink-0">
-            <Link href="/" className="flex items-center" onClick={handleLogoClick}>
+            <Link href="/archive" className="flex items-center" onClick={handleLogoClick}>
               <span className="font-heading font-bold text-xl sm:text-2xl text-primary hover:text-primary/80 transition-colors whitespace-nowrap">
                 Siddharth Magesh
               </span>

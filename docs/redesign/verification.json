@@ -1,0 +1,539 @@
+{
+  "routes": [
+    {
+      "route": "/awards",
+      "status": 200
+    },
+    {
+      "route": "/experience",
+      "status": 200
+    },
+    {
+      "route": "/certifications",
+      "status": 200
+    },
+    {
+      "route": "/about",
+      "status": 200
+    },
+    {
+      "route": "/projects",
+      "status": 200
+    },
+    {
+      "route": "/research",
+      "status": 200
+    },
+    {
+      "route": "/",
+      "status": 200
+    },
+    {
+      "route": "/work/agrihub",
+      "status": 200
+    },
+    {
+      "route": "/work/breathy-sweet",
+      "status": 200
+    },
+    {
+      "route": "/work/crosslink",
+      "status": 200
+    },
+    {
+      "route": "/work/deep-learning-sandbox",
+      "status": 200
+    },
+    {
+      "route": "/work/ecofloater",
+      "status": 200
+    },
+    {
+      "route": "/work/life-connect",
+      "status": 200
+    },
+    {
+      "route": "/work/medinote-ai",
+      "status": 200
+    },
+    {
+      "route": "/work/mterbs",
+      "status": 200
+    },
+    {
+      "route": "/work/multimodal-neuroscience",
+      "status": 200
+    },
+    {
+      "route": "/work/ossarth",
+      "status": 200
+    },
+    {
+      "route": "/work/reasoning-verification",
+      "status": 200
+    },
+    {
+      "route": "/work/retail-vision-systems",
+      "status": 200
+    },
+    {
+      "route": "/work/sentimatrix",
+      "status": 200
+    },
+    {
+      "route": "/work/vec-website",
+      "status": 200
+    },
+    {
+      "route": "/work/yrc-website",
+      "status": 200
+    },
+    {
+      "route": "/organizations",
+      "status": 200
+    },
+    {
+      "route": "/archive",
+      "status": 200
+    },
+    {
+      "route": "/archive/about",
+      "status": 200
+    },
+    {
+      "route": "/archive/research",
+      "status": 200
+    },
+    {
+      "route": "/archive/projects",
+      "status": 200
+    },
+    {
+      "route": "/archive/experience",
+      "status": 200
+    },
+    {
+      "route": "/archive/contact",
+      "status": 200
+    },
+    {
+      "route": "/archive/hackathons",
+      "status": 200
+    },
+    {
+      "route": "/archive/leadership",
+      "status": 200
+    },
+    {
+      "route": "/archive/leadership/webops",
+      "status": 200
+    },
+    {
+      "route": "/archive/leadership/youth-red-cross",
+      "status": 200
+    },
+    {
+      "route": "/archive/articles",
+      "status": 200
+    },
+    {
+      "route": "/archive/articles/agi-next-step-humanity",
+      "status": 200
+    },
+    {
+      "route": "/archive/articles/ai-operating-systems-future",
+      "status": 200
+    },
+    {
+      "route": "/archive/articles/ai-replacing-humans-jobs",
+      "status": 200
+    },
+    {
+      "route": "/archive/articles/ai-sports-commentary-future",
+      "status": 200
+    },
+    {
+      "route": "/archive/experience/gradgear",
+      "status": 200
+    },
+    {
+      "route": "/archive/experience/iitm-brain-centre",
+      "status": 200
+    },
+    {
+      "route": "/archive/experience/inzpire-solutions",
+      "status": 200
+    },
+    {
+      "route": "/archive/experience/scrapify",
+      "status": 200
+    },
+    {
+      "route": "/archive/experience/vec-website",
+      "status": 200
+    },
+    {
+      "route": "/archive/projects/agrihub",
+      "status": 200
+    },
+    {
+      "route": "/archive/projects/breathy-sweet",
+      "status": 200
+    },
+    {
+      "route": "/archive/projects/crosslink",
+      "status": 200
+    },
+    {
+      "route": "/archive/projects/life-connect",
+      "status": 200
+    },
+    {
+      "route": "/archive/projects/medinote-ai",
+      "status": 200
+    },
+    {
+      "route": "/archive/projects/sentimatrix",
+      "status": 200
+    },
+    {
+      "route": "/archive/projects/vec-website",
+      "status": 200
+    },
+    {
+      "route": "/archive/projects/yrc-website",
+      "status": 200
+    },
+    {
+      "route": "/archive/research/ecofloater",
+      "status": 200
+    },
+    {
+      "route": "/archive/research/mterbs",
+      "status": 200
+    },
+    {
+      "route": "/archive/research/ossarth",
+      "status": 200
+    }
+  ],
+  "redirects": [
+    {
+      "source": "/contact",
+      "destination": "/#contact",
+      "status": 308
+    },
+    {
+      "source": "/hackathons",
+      "destination": "/archive/hackathons",
+      "status": 308
+    },
+    {
+      "source": "/leadership",
+      "destination": "/organizations",
+      "status": 308
+    },
+    {
+      "source": "/leadership/webops",
+      "destination": "/organizations#webops",
+      "status": 308
+    },
+    {
+      "source": "/leadership/youth-red-cross",
+      "destination": "/organizations#youth-red-cross",
+      "status": 308
+    },
+    {
+      "source": "/articles",
+      "destination": "/archive/articles",
+      "status": 308
+    },
+    {
+      "source": "/articles/agi-next-step-humanity",
+      "destination": "/archive/articles/agi-next-step-humanity",
+      "status": 308
+    },
+    {
+      "source": "/articles/ai-operating-systems-future",
+      "destination": "/archive/articles/ai-operating-systems-future",
+      "status": 308
+    },
+    {
+      "source": "/articles/ai-replacing-humans-jobs",
+      "destination": "/archive/articles/ai-replacing-humans-jobs",
+      "status": 308
+    },
+    {
+      "source": "/articles/ai-sports-commentary-future",
+      "destination": "/archive/articles/ai-sports-commentary-future",
+      "status": 308
+    },
+    {
+      "source": "/experience/gradgear",
+      "destination": "/archive/experience/gradgear",
+      "status": 308
+    },
+    {
+      "source": "/experience/iitm-brain-centre",
+      "destination": "/work/multimodal-neuroscience",
+      "status": 308
+    },
+    {
+      "source": "/experience/inzpire-solutions",
+      "destination": "/work/retail-vision-systems",
+      "status": 308
+    },
+    {
+      "source": "/experience/scrapify",
+      "destination": "/work/ecofloater",
+      "status": 308
+    },
+    {
+      "source": "/experience/vec-website",
+      "destination": "/work/vec-website",
+      "status": 308
+    },
+    {
+      "source": "/projects/agrihub",
+      "destination": "/work/agrihub",
+      "status": 308
+    },
+    {
+      "source": "/projects/breathy-sweet",
+      "destination": "/work/breathy-sweet",
+      "status": 308
+    },
+    {
+      "source": "/projects/crosslink",
+      "destination": "/work/crosslink",
+      "status": 308
+    },
+    {
+      "source": "/projects/life-connect",
+      "destination": "/work/life-connect",
+      "status": 308
+    },
+    {
+      "source": "/projects/medinote-ai",
+      "destination": "/work/medinote-ai",
+      "status": 308
+    },
+    {
+      "source": "/projects/sentimatrix",
+      "destination": "/work/sentimatrix",
+      "status": 308
+    },
+    {
+      "source": "/projects/vec-website",
+      "destination": "/work/vec-website",
+      "status": 308
+    },
+    {
+      "source": "/projects/yrc-website",
+      "destination": "/work/yrc-website",
+      "status": 308
+    },
+    {
+      "source": "/research/ecofloater",
+      "destination": "/work/ecofloater",
+      "status": 308
+    },
+    {
+      "source": "/research/mterbs",
+      "destination": "/work/mterbs",
+      "status": 308
+    },
+    {
+      "source": "/research/ossarth",
+      "destination": "/work/ossarth",
+      "status": 308
+    }
+  ],
+  "assets": [
+    "public/CERTIFICATIONS/Hackathons/Anatha Ideathon.pdf",
+    "public/CERTIFICATIONS/Hackathons/Anurag Hackathon.pdf",
+    "public/CERTIFICATIONS/Hackathons/KCG Winner Certificate.pdf",
+    "public/CERTIFICATIONS/Hackathons/KPR Hackathon.pdf",
+    "public/CERTIFICATIONS/Hackathons/PEC Special Prize.pdf",
+    "public/CERTIFICATIONS/Hackathons/Pondy Hackathon.pdf",
+    "public/CERTIFICATIONS/Hackathons/REC Hackathon.pdf",
+    "public/CERTIFICATIONS/Hackathons/SRM Hackathon.pdf",
+    "public/CERTIFICATIONS/Hackathons/SVCE Hackathon.pdf",
+    "public/CERTIFICATIONS/Hackathons/Velammal Hackathon.pdf",
+    "public/CERTIFICATIONS/Intern Certifications/SGBC/SGBC_certificate.pdf",
+    "public/CERTIFICATIONS/Intern Certifications/inzpire/internship-certificate-inzpire.pdf",
+    "public/CERTIFICATIONS/Intern Certifications/inzpire/internship-report-inzpire.pdf",
+    "public/CERTIFICATIONS/Intern Certifications/inzpire/offer-letter-inzpire.pdf",
+    "public/CERTIFICATIONS/Intern Certifications/scrapify-internship-certificate.pdf",
+    "public/CERTIFICATIONS/Intern Certifications/scrapify-offer-letter.pdf",
+    "public/CERTIFICATIONS/Marathons/Cancer Caution Marathon.pdf",
+    "public/CERTIFICATIONS/Marathons/Marathon.pdf",
+    "public/CERTIFICATIONS/Paper Presentations/CIT Paper Presentation.pdf",
+    "public/CERTIFICATIONS/Paper Presentations/Velammal Engineering College Expo.pdf",
+    "public/CERTIFICATIONS/Paper Presentations/Velammal Engineering College Paper Presentation.pdf",
+    "public/CERTIFICATIONS/Publications/MTERBS-Research-Paper.pdf",
+    "public/CERTIFICATIONS/Publications/OSSARTH-Research-Paper.pdf",
+    "public/CERTIFICATIONS/Publications/SIDDHARTH-MAGESH-PUBLICATIONS.pdf",
+    "public/CERTIFICATIONS/Social Awareness/Blood Donation Camp.pdf",
+    "public/CERTIFICATIONS/Social Awareness/Blood Donation Lions.pdf",
+    "public/CERTIFICATIONS/Social Awareness/Blood Donation.pdf",
+    "public/CERTIFICATIONS/Social Awareness/Helmet Awareness.pdf",
+    "public/CERTIFICATIONS/Social Awareness/Lake Cleaning.pdf",
+    "public/CERTIFICATIONS/extra/COSTAL CLEANUP CERTIFICATE.pdf",
+    "public/CERTIFICATIONS/extra/Class 10.pdf",
+    "public/CERTIFICATIONS/extra/KCG Partcipant Certificate.pdf",
+    "public/CERTIFICATIONS/extra/TJS Debugging.pdf",
+    "public/CERTIFICATIONS/extra/TJS Pattern Printing.pdf",
+    "public/CERTIFICATIONS/extra/Velammal Hackathon 2.pdf",
+    "public/CERTIFICATIONS/professional certificates/ADJP Diploma.pdf",
+    "public/CERTIFICATIONS/professional certificates/Coursera GENAI.pdf",
+    "public/CERTIFICATIONS/professional certificates/Coursera ML1.pdf",
+    "public/CERTIFICATIONS/professional certificates/GenAI.pdf",
+    "public/CERTIFICATIONS/professional certificates/IITM Foundation.pdf",
+    "public/CERTIFICATIONS/professional certificates/Java course e-certificate.pdf",
+    "public/CERTIFICATIONS/professional certificates/NLP/Coursera NLP.pdf",
+    "public/CERTIFICATIONS/professional certificates/NLP/Coursera NLP1.pdf",
+    "public/CERTIFICATIONS/professional certificates/NLP/Coursera NLP2.pdf",
+    "public/CERTIFICATIONS/professional certificates/NLP/Coursera NLP3.pdf",
+    "public/CERTIFICATIONS/professional certificates/NLP/Coursera NLP4.pdf",
+    "public/CERTIFICATIONS/professional certificates/Power BI and Tableau.pdf",
+    "public/CERTIFICATIONS/professional certificates/PyTorch/Coursera Pytorch Techniques.pdf",
+    "public/CERTIFICATIONS/professional certificates/PyTorch/Coursera Pytorch fundamentals.pdf",
+    "public/CERTIFICATIONS/professional certificates/PyTorch/Pytorch Advanced Architectures.pdf",
+    "public/CERTIFICATIONS/professional certificates/PyTorch/Pytorch Specialization Certificate.pdf",
+    "public/CERTIFICATIONS/professional certificates/Python for Data Science.pdf",
+    "public/CERTIFICATIONS/professional certificates/TensorFlow Certification.pdf",
+    "public/CERTIFICATIONS/professional certificates/transformers certificate.pdf",
+    "public/CERTIFICATIONS/professional certificates/x86 assembly.pdf",
+    "public/agrihub/agrihub-interface-1.png",
+    "public/agrihub/agrihub-interface-2.png",
+    "public/agrihub/agrihub-interface-3.png",
+    "public/agrihub/agrihub-interface-4.png",
+    "public/blackops-logo.png",
+    "public/breathy-sweet-interface.png",
+    "public/breathy-sweet-report.pdf",
+    "public/community-engagement-yrc.jpg",
+    "public/crosslink-project-banner.jpg",
+    "public/development-team-photo.jpg",
+    "public/ecofloater-system.jpg",
+    "public/hackathons/48hr-hackday.jpg",
+    "public/hackathons/codeathon-23.jpg",
+    "public/hackathons/hackeroverflow-30.jpg",
+    "public/hackathons/hackverse-23-nitk.jpg",
+    "public/hackathons/hackverse-24.jpg",
+    "public/hackathons/hackverse-25-nitk.jpg",
+    "public/hackathons/ideathon.jpg",
+    "public/hackathons/innothan-24.jpg",
+    "public/hackathons/innowel.jpg",
+    "public/hackathons/intel-genai-24.jpg",
+    "public/hackathons/prabhignyan.jpg",
+    "public/hackathons/smart-hacks-24.jpg",
+    "public/hackathons/team-group-photo.jpg",
+    "public/hackathons/team-photo-1.jpg",
+    "public/hackathons/team-photo-2.jpg",
+    "public/hackathons/team-photo-3.jpg",
+    "public/hackathons/team-photo-5.jpg",
+    "public/hackathons/tech-genesis-25.jpg",
+    "public/inzpire/internship-certificate-inzpire.pdf",
+    "public/inzpire/internship-report-inzpire.pdf",
+    "public/inzpire/offer-letter-inzpire.pdf",
+    "public/medinote/product1.png",
+    "public/medinote/product2.png",
+    "public/medinote/product3.png",
+    "public/mterbs-certificate-1.jpg",
+    "public/mterbs-certificate-2.jpg",
+    "public/mterbs-system-diagram.jpeg",
+    "public/ossarth-architecture-diagram.png",
+    "public/ossarth-interface-1.png",
+    "public/ossarth-interface-2.png",
+    "public/ossarth-interface-3.png",
+    "public/ossarth-interface-4.png",
+    "public/placeholder-logo.png",
+    "public/placeholder-logo.svg",
+    "public/placeholder-user.jpg",
+    "public/placeholder.jpg",
+    "public/placeholder.svg",
+    "public/professional-ai-researcher-portrait.JPG",
+    "public/research-papers/MTERBS-Research-Paper.pdf",
+    "public/research-papers/OSSARTH-Research-Paper.pdf",
+    "public/resume-siddharth-magesh.pdf",
+    "public/robots.txt",
+    "public/scrapify-internship-certificate.pdf",
+    "public/scrapify-internship.jpg",
+    "public/scrapify-offer-letter.pdf",
+    "public/sentimatrix-structure.png",
+    "public/siddharth-profile-vertical.png",
+    "public/vec-website-cover.png",
+    "public/webops/development-team-photo.png",
+    "public/webops/webops-team-logo.png",
+    "public/yrc-awareness-booth.jpg",
+    "public/yrc/animal-welfare.jpg",
+    "public/yrc/blood-donation.jpg",
+    "public/yrc/community-outreach.jpg",
+    "public/yrc/environmental-campaign.jpg",
+    "public/yrc/event-coordination.jpg",
+    "public/yrc/joint-secretary-2023-24.jpg",
+    "public/yrc/plantation-event.jpg",
+    "public/yrc/safety-awareness.jpg",
+    "public/yrc/team-building.jpg",
+    "public/yrc/technical-head-2024-25.jpg",
+    "public/yrc/technical-training.jpg",
+    "public/yrc/volunteer-2022-23.jpg",
+    "public/yrc/workshop-activities.jpg",
+    "public/yrc/yrc-leadership.jpg",
+    "public/archive-assets/resume-before-redesign.pdf"
+  ],
+  "responsive": [
+    {
+      "route": "/",
+      "width": 320,
+      "overflow": false
+    },
+    {
+      "route": "/work/sentimatrix",
+      "width": 320,
+      "overflow": false
+    },
+    {
+      "route": "/",
+      "width": 390,
+      "overflow": false
+    },
+    {
+      "route": "/work/sentimatrix",
+      "width": 390,
+      "overflow": false
+    },
+    {
+      "route": "/",
+      "width": 768,
+      "overflow": false
+    },
+    {
+      "route": "/work/sentimatrix",
+      "width": 768,
+      "overflow": false
+    },
+    {
+      "route": "/",
+      "width": 1024,
+      "overflow": false
+    },
+    {
+      "route": "/work/sentimatrix",
+      "width": 1024,
+      "overflow": false
+    },
+    {
+      "route": "/",
+      "width": 1440,
+      "overflow": false
+    },
+    {
+      "route": "/work/sentimatrix",
+      "width": 1440,
+      "overflow": false
+    }
+  ],
+  "browserErrors": []
+}

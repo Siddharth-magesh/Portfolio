@@ -1,0 +1,4 @@
+import type { Metadata } from "next"
+import { Award, Document } from "@/components/portfolio/content"
+export const metadata: Metadata = { title: "Awards & recognition", description: "Selected research recognition and conference presentations.", alternates: { canonical: "/awards" } }
+export default function Awards() { return <Document title="Awards & recognition" description="Selected recognition for research and product development." eyebrow="Recognition"><section><h2>Award</h2><Award /></section><section><h2>Conference presentation</h2><h3>NCAIBIA 2025</h3><p className="meta">March 2025</p><p>Research presentation at the National Level Conference on AI Applications. Listed as a presentation, not an award or journal publication.</p></section><section><h2>Earlier activities</h2><p><a href="/archive/hackathons">Competition and participation history - archive →</a></p></section></Document> }

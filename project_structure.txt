@@ -1,0 +1,461 @@
+Folder PATH listing for volume New Volume
+Volume serial number is F0FC-2E46
+D:.
+?   .gitignore
+?   .npmrc
+?   components.json
+?   LICENSE
+?   next.config.mjs
+?   package-lock.json
+?   package.json
+?   pnpm-lock.yaml
+?   postcss.config.mjs
+?   README.md
+?   tsconfig.json
+?   
++---app
+?   ?   error.tsx
+?   ?   globals.css
+?   ?   layout.tsx
+?   ?   not-found.tsx
+?   ?   page.tsx
+?   ?   sitemap.ts
+?   ?   
+?   +---about
+?   ?       page.tsx
+?   ?       
+?   +---articles
+?   ?   ?   page.tsx
+?   ?   ?   
+?   ?   +---agi-next-step-humanity
+?   ?   ?       page.tsx
+?   ?   ?       
+?   ?   +---ai-operating-systems-future
+?   ?   ?       page.tsx
+?   ?   ?       
+?   ?   +---ai-replacing-humans-jobs
+?   ?   ?       page.tsx
+?   ?   ?       
+?   ?   +---ai-sports-commentary-future
+?   ?           page.tsx
+?   ?           
+?   +---contact
+?   ?       page.tsx
+?   ?       
+?   +---experience
+?   ?   ?   page.tsx
+?   ?   ?   
+?   ?   +---gradgear
+?   ?   ?       page.tsx
+?   ?   ?       
+?   ?   +---iitm-brain-centre
+?   ?   ?       page.tsx
+?   ?   ?       
+?   ?   +---inzpire-solutions
+?   ?   ?       page.tsx
+?   ?   ?       
+?   ?   +---scrapify
+?   ?   ?       page.tsx
+?   ?   ?       
+?   ?   +---vec-website
+?   ?           page.tsx
+?   ?           
+?   +---hackathons
+?   ?       page.tsx
+?   ?       
+?   +---leadership
+?   ?   ?   page.tsx
+?   ?   ?   
+?   ?   +---webops
+?   ?   ?       page.tsx
+?   ?   ?       
+?   ?   +---youth-red-cross
+?   ?           page.tsx
+?   ?           
+?   +---projects
+?   ?   ?   page.tsx
+?   ?   ?   
+?   ?   +---agrihub
+?   ?   ?       page.tsx
+?   ?   ?       
+?   ?   +---breathy-sweet
+?   ?   ?       page.tsx
+?   ?   ?       
+?   ?   +---crosslink
+?   ?   ?       page.tsx
+?   ?   ?       
+?   ?   +---life-connect
+?   ?   ?       page.tsx
+?   ?   ?       
+?   ?   +---medinote-ai
+?   ?   ?       page.tsx
+?   ?   ?       
+?   ?   +---sentimatrix
+?   ?   ?       page.tsx
+?   ?   ?       
+?   ?   +---vec-website
+?   ?   ?       page.tsx
+?   ?   ?       
+?   ?   +---yrc-website
+?   ?           loading.tsx
+?   ?           page.tsx
+?   ?           
+?   +---research
+?       ?   page.tsx
+?       ?   
+?       +---ecofloater
+?       ?       page.tsx
+?       ?       
+?       +---mterbs
+?       ?       page.tsx
+?       ?       
+?       +---ossarth
+?               page.tsx
+?               
++---components
+?   ?   animations.tsx
+?   ?   card-skeleton.tsx
+?   ?   client-provider-wrapper.tsx
+?   ?   client-provider.tsx
+?   ?   footer.tsx
+?   ?   global-loading-overlay.tsx
+?   ?   json-ld.tsx
+?   ?   loading-screen.tsx
+?   ?   navigation.tsx
+?   ?   optimized-image.tsx
+?   ?   page-templates.tsx
+?   ?   scroll-to-top.tsx
+?   ?   skills-visualization.tsx
+?   ?   theme-provider.tsx
+?   ?   
+?   +---ui
+?           accordion.tsx
+?           alert-dialog.tsx
+?           alert.tsx
+?           aspect-ratio.tsx
+?           avatar.tsx
+?           badge.tsx
+?           breadcrumb.tsx
+?           button.tsx
+?           calendar.tsx
+?           card.tsx
+?           carousel.tsx
+?           chart.tsx
+?           checkbox.tsx
+?           collapsible.tsx
+?           command.tsx
+?           context-menu.tsx
+?           dialog.tsx
+?           drawer.tsx
+?           dropdown-menu.tsx
+?           form.tsx
+?           hover-card.tsx
+?           input-otp.tsx
+?           input.tsx
+?           label.tsx
+?           menubar.tsx
+?           navigation-menu.tsx
+?           pagination.tsx
+?           popover.tsx
+?           progress.tsx
+?           radio-group.tsx
+?           resizable.tsx
+?           scroll-area.tsx
+?           select.tsx
+?           separator.tsx
+?           sheet.tsx
+?           sidebar.tsx
+?           skeleton.tsx
+?           slider.tsx
+?           sonner.tsx
+?           switch.tsx
+?           table.tsx
+?           tabs.tsx
+?           textarea.tsx
+?           toast.tsx
+?           toaster.tsx
+?           toggle-group.tsx
+?           toggle.tsx
+?           tooltip.tsx
+?           use-mobile.tsx
+?           use-toast.ts
+?           
++---contexts
+?       LoadingContext.tsx
+?       
++---docs
+?   ?   IMPROVEMENTS.md
+?   ?   LINKS-UPDATE.md
+?   ?   OVERVIEW.md
+?   ?   STYLE-GUIDE.md
+?   ?   TASKS.md
+?   ?   
+?   +---.ipynb_checkpoints
+?   ?       IMPROVEMENTS-checkpoint.md
+?   ?       LINKS-UPDATE-checkpoint.md
+?   ?       OVERVIEW-checkpoint.md
+?   ?       STYLE-GUIDE-checkpoint.md
+?   ?       TASKS-checkpoint.md
+?   ?       
+?   +---official documents
+?       +---certifications
+?           +---extra
+?           ?       block chain quiz certificate.png
+?           ?       Class 10.pdf
+?           ?       COSTAL CLEANUP CERTIFICATE.pdf
+?           ?       KCG Partcipant Certificate.pdf
+?           ?       TJS Debugging.pdf
+?           ?       TJS Pattern Printing.pdf
+?           ?       Velammal Hackathon 2.pdf
+?           ?       viksit_bharat.jpg
+?           ?       Works and Contents.docx
+?           ?       
+?           +---Hackathons
+?           ?       Anatha Ideathon.pdf
+?           ?       Anurag Hackathon.pdf
+?           ?       KCG Winner Certificate.pdf
+?           ?       KPR Hackathon.pdf
+?           ?       PEC Special Prize.pdf
+?           ?       Pondy Hackathon.pdf
+?           ?       REC Hackathon.pdf
+?           ?       SRM Hackathon.pdf
+?           ?       SVCE Hackathon.pdf
+?           ?       Velammal Hackathon.pdf
+?           ?       
+?           +---Intern Certifications
+?           ?   ?   scrapify-internship-certificate.pdf
+?           ?   ?   scrapify-offer-letter.pdf
+?           ?   ?   
+?           ?   +---inzpire
+?           ?           internship-certificate-inzpire.pdf
+?           ?           internship-report-inzpire.pdf
+?           ?           offer-letter-inzpire.pdf
+?           ?           
+?           +---Marathons
+?           ?       Cancer Caution Marathon.pdf
+?           ?       Marathon.pdf
+?           ?       
+?           +---Paper Presentations
+?           ?       CIT Paper Presentation.pdf
+?           ?       Velammal Engineering College Expo.pdf
+?           ?       Velammal Engineering College Paper Presentation.pdf
+?           ?       
+?           +---professional certificates
+?           ?   ?   ADJP Diploma.pdf
+?           ?   ?   Coursera GENAI.pdf
+?           ?   ?   Coursera ML1.pdf
+?           ?   ?   GenAI.pdf
+?           ?   ?   IITM Foundation.pdf
+?           ?   ?   Java course e-certificate.pdf
+?           ?   ?   Power BI and Tableau.pdf
+?           ?   ?   Python for Data Science.pdf
+?           ?   ?   TensorFlow Certification.pdf
+?           ?   ?   transformers certificate.pdf
+?           ?   ?   x86 assembly.pdf
+?           ?   ?   
+?           ?   +---NLP
+?           ?   ?       Coursera NLP.pdf
+?           ?   ?       Coursera NLP1.pdf
+?           ?   ?       Coursera NLP2.pdf
+?           ?   ?       Coursera NLP3.pdf
+?           ?   ?       Coursera NLP4.pdf
+?           ?   ?       
+?           ?   +---PyTorch
+?           ?           Coursera Pytorch fundamentals.pdf
+?           ?           Coursera Pytorch Techniques.pdf
+?           ?           Pytorch Advanced Architectures.pdf
+?           ?           Pytorch Specialization Certificate.pdf
+?           ?           
+?           +---Publications
+?           ?       MTERBS-Research-Paper.pdf
+?           ?       OSSARTH-Research-Paper.pdf
+?           ?       SIDDHARTH-MAGESH-PUBLICATIONS.pdf
+?           ?       
+?           +---Social Awareness
+?                   Blood Donation Camp.pdf
+?                   Blood Donation Lions.pdf
+?                   Blood Donation.pdf
+?                   Cancer Marathon.jpg
+?                   Helmet Awareness.pdf
+?                   Lake Cleaning.pdf
+?                   
++---hooks
+?       use-mobile.ts
+?       use-mounted.ts
+?       use-toast.ts
+?       
++---lib
+?       utils.ts
+?       
++---public
+    ?   blackops-logo.png
+    ?   breathy-sweet-interface.png
+    ?   breathy-sweet-report.pdf
+    ?   community-engagement-yrc.jpg
+    ?   crosslink-project-banner.jpg
+    ?   development-team-photo.jpg
+    ?   ecofloater-system.jpg
+    ?   mterbs-certificate-1.jpg
+    ?   mterbs-certificate-2.jpg
+    ?   mterbs-system-diagram.jpeg
+    ?   ossarth-architecture-diagram.png
+    ?   ossarth-interface-1.png
+    ?   ossarth-interface-2.png
+    ?   ossarth-interface-3.png
+    ?   ossarth-interface-4.png
+    ?   placeholder-logo.png
+    ?   placeholder-logo.svg
+    ?   placeholder-user.jpg
+    ?   placeholder.jpg
+    ?   placeholder.svg
+    ?   professional-ai-researcher-portrait.JPG
+    ?   resume-siddharth-magesh.pdf
+    ?   robots.txt
+    ?   scrapify-internship-certificate.pdf
+    ?   scrapify-internship.jpg
+    ?   scrapify-offer-letter.pdf
+    ?   sentimatrix-structure.png
+    ?   siddharth-profile-vertical.png
+    ?   vec-website-cover.png
+    ?   yrc-awareness-booth.jpg
+    ?   
+    +---agrihub
+    ?       agrihub-interface-1.png
+    ?       agrihub-interface-2.png
+    ?       agrihub-interface-3.png
+    ?       agrihub-interface-4.png
+    ?       
+    +---CERTIFICATIONS
+    ?   +---extra
+    ?   ?       Class 10.pdf
+    ?   ?       COSTAL CLEANUP CERTIFICATE.pdf
+    ?   ?       KCG Partcipant Certificate.pdf
+    ?   ?       TJS Debugging.pdf
+    ?   ?       TJS Pattern Printing.pdf
+    ?   ?       Velammal Hackathon 2.pdf
+    ?   ?       
+    ?   +---Hackathons
+    ?   ?       Anatha Ideathon.pdf
+    ?   ?       Anurag Hackathon.pdf
+    ?   ?       KCG Winner Certificate.pdf
+    ?   ?       KPR Hackathon.pdf
+    ?   ?       PEC Special Prize.pdf
+    ?   ?       Pondy Hackathon.pdf
+    ?   ?       REC Hackathon.pdf
+    ?   ?       SRM Hackathon.pdf
+    ?   ?       SVCE Hackathon.pdf
+    ?   ?       Velammal Hackathon.pdf
+    ?   ?       
+    ?   +---Intern Certifications
+    ?   ?   ?   scrapify-internship-certificate.pdf
+    ?   ?   ?   scrapify-offer-letter.pdf
+    ?   ?   ?   
+    ?   ?   +---inzpire
+    ?   ?   ?       internship-certificate-inzpire.pdf
+    ?   ?   ?       internship-report-inzpire.pdf
+    ?   ?   ?       offer-letter-inzpire.pdf
+    ?   ?   ?       
+    ?   ?   +---SGBC
+    ?   ?           SGBC_certificate.pdf
+    ?   ?           
+    ?   +---Marathons
+    ?   ?       Cancer Caution Marathon.pdf
+    ?   ?       Marathon.pdf
+    ?   ?       
+    ?   +---Paper Presentations
+    ?   ?       CIT Paper Presentation.pdf
+    ?   ?       Velammal Engineering College Expo.pdf
+    ?   ?       Velammal Engineering College Paper Presentation.pdf
+    ?   ?       
+    ?   +---professional certificates
+    ?   ?   ?   ADJP Diploma.pdf
+    ?   ?   ?   Coursera GENAI.pdf
+    ?   ?   ?   Coursera ML1.pdf
+    ?   ?   ?   GenAI.pdf
+    ?   ?   ?   IITM Foundation.pdf
+    ?   ?   ?   Java course e-certificate.pdf
+    ?   ?   ?   Power BI and Tableau.pdf
+    ?   ?   ?   Python for Data Science.pdf
+    ?   ?   ?   TensorFlow Certification.pdf
+    ?   ?   ?   transformers certificate.pdf
+    ?   ?   ?   x86 assembly.pdf
+    ?   ?   ?   
+    ?   ?   +---NLP
+    ?   ?   ?       Coursera NLP.pdf
+    ?   ?   ?       Coursera NLP1.pdf
+    ?   ?   ?       Coursera NLP2.pdf
+    ?   ?   ?       Coursera NLP3.pdf
+    ?   ?   ?       Coursera NLP4.pdf
+    ?   ?   ?       
+    ?   ?   +---PyTorch
+    ?   ?           Coursera Pytorch fundamentals.pdf
+    ?   ?           Coursera Pytorch Techniques.pdf
+    ?   ?           Pytorch Advanced Architectures.pdf
+    ?   ?           Pytorch Specialization Certificate.pdf
+    ?   ?           
+    ?   +---Publications
+    ?   ?       MTERBS-Research-Paper.pdf
+    ?   ?       OSSARTH-Research-Paper.pdf
+    ?   ?       SIDDHARTH-MAGESH-PUBLICATIONS.pdf
+    ?   ?       
+    ?   +---Social Awareness
+    ?           Blood Donation Camp.pdf
+    ?           Blood Donation Lions.pdf
+    ?           Blood Donation.pdf
+    ?           Helmet Awareness.pdf
+    ?           Lake Cleaning.pdf
+    ?           
+    +---hackathons
+    ?       48hr-hackday.jpg
+    ?       codeathon-23.jpg
+    ?       hackeroverflow-30.jpg
+    ?       hackverse-23-nitk.jpg
+    ?       hackverse-24.jpg
+    ?       hackverse-25-nitk.jpg
+    ?       ideathon.jpg
+    ?       innothan-24.jpg
+    ?       innowel.jpg
+    ?       intel-genai-24.jpg
+    ?       prabhignyan.jpg
+    ?       smart-hacks-24.jpg
+    ?       team-group-photo.jpg
+    ?       team-photo-1.jpg
+    ?       team-photo-2.jpg
+    ?       team-photo-3.jpg
+    ?       team-photo-5.jpg
+    ?       tech-genesis-25.jpg
+    ?       
+    +---inzpire
+    ?       internship-certificate-inzpire.pdf
+    ?       internship-report-inzpire.pdf
+    ?       offer-letter-inzpire.pdf
+    ?       
+    +---medinote
+    ?       product1.png
+    ?       product2.png
+    ?       product3.png
+    ?       
+    +---research-papers
+    ?       MTERBS-Research-Paper.pdf
+    ?       OSSARTH-Research-Paper.pdf
+    ?       
+    +---webops
+    ?       development-team-photo.png
+    ?       webops-team-logo.png
+    ?       
+    +---yrc
+            animal-welfare.jpg
+            blood-donation.jpg
+            community-outreach.jpg
+            environmental-campaign.jpg
+            event-coordination.jpg
+            joint-secretary-2023-24.jpg
+            plantation-event.jpg
+            safety-awareness.jpg
+            team-building.jpg
+            technical-head-2024-25.jpg
+            technical-training.jpg
+            volunteer-2022-23.jpg
+            workshop-activities.jpg
+            yrc-leadership.jpg
+            

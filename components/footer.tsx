@@ -20,25 +20,25 @@ export function Footer() {
             <h3 className="font-heading font-bold text-lg mb-4">Quick Links</h3>
             <div className="space-y-2">
               <Link
-                href="/research"
+                href="/archive/research"
                 className="block text-sm text-muted-foreground hover:text-primary transition-colors"
               >
                 Research Projects
               </Link>
               <Link
-                href="/experience"
+                href="/archive/experience"
                 className="block text-sm text-muted-foreground hover:text-primary transition-colors"
               >
                 Professional Experience
               </Link>
               <Link
-                href="/hackathons"
+                href="/archive/hackathons"
                 className="block text-sm text-muted-foreground hover:text-primary transition-colors"
               >
                 Hackathons & Events
               </Link>
               <Link
-                href="/contact"
+                href="/archive/contact"
                 className="block text-sm text-muted-foreground hover:text-primary transition-colors"
               >
                 Get in Touch

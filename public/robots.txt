@@ -5,7 +5,7 @@ User-agent: *
 Allow: /
 
 # Sitemap location
-Sitemap: https://siddharthmagesh.com/sitemap.xml
+Sitemap: https://siddharth-magesh.me/sitemap.xml
 
 # Disallow admin or private paths (if any)
 Disallow: /api/

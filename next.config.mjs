@@ -1,5 +1,7 @@
+import { redirects } from './lib/portfolio-routes.mjs'
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  async redirects() { return redirects },
   eslint: {
     ignoreDuringBuilds: false,
   },

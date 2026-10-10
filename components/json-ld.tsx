@@ -3,7 +3,7 @@ export function PersonJsonLd() {
     "@context": "https://schema.org",
     "@type": "Person",
     name: "Siddharth Magesh",
-    url: "https://siddharthmagesh.com",
+    url: "/archive",
     image: "https://siddharthmagesh.com/profile-image.jpg",
     sameAs: [
       "https://github.com/Siddharth-Magesh",
@@ -59,7 +59,7 @@ export function WebsiteJsonLd() {
     "@context": "https://schema.org",
     "@type": "WebSite",
     name: "Siddharth Magesh Portfolio",
-    url: "https://siddharthmagesh.com",
+    url: "/archive",
     description:
       "Professional portfolio of Siddharth Magesh, AI Researcher specializing in NLP, Computer Vision, and Generative AI.",
     author: {
@@ -103,7 +103,7 @@ export function ArticleJsonLd({
     author: {
       "@type": "Person",
       name: "Siddharth Magesh",
-      url: "https://siddharthmagesh.com",
+      url: "/archive",
     },
     publisher: {
       "@type": "Person",
